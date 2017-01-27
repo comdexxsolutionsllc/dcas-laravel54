@@ -7,3 +7,9 @@
 Homestead.json
 Homestead.yaml
 .env
+/tests/_output/*
+git_tag
+/_ide_helper.php
+admin-test.token
+*__notes
+git_commands
