@@ -1,0 +1,1 @@
+{"php":"7.0.14-1+deb.sury.org~xenial+1","version":"2.0.0","rules":{"no_unused_imports":true,"no_trailing_whitespace":true,"indentation_type":true},"hashes":{"home\/shine\/PhpstormProjects\/dcas\/database\/migrations\/2016_12_11_134308_add_domain_to_users.php":3459149773}}
