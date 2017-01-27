@@ -184,6 +184,7 @@ return [
         /**
          * Vendor Service Providers...
          */
+        Laracasts\Flash\FlashServiceProvider::class,
         Nwidart\Modules\LaravelModulesServiceProvider::class,
 
 

@@ -14,12 +14,24 @@
         "laravel/socialite": "*",
         "laravel/tinker": "~1.0",
         "nwidart/laravel-modules": "^1.13",
-        "predis/predis": "^1.1"
+        "predis/predis": "^1.1",
+        "doctrine/dbal": "~2.3",
+        "dompdf/dompdf": "*",
+        "geoip/geoip": "^1.17",
+        "laracasts/flash": "^2.0",
+        "laracasts/presenter": "^0.2.1",
+        "league/fractal": "0.14.0",
+        "spatie/laravel-fractal": "^3.0.0",
+        "stripe/stripe-php": "~3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~5.0"
+        "phpunit/phpunit": "~5.0",
+        "codeception/codeception": "*",
+        "phpspec/phpspec": "^3.1",
+        "symfony/css-selector": "3.1.*",
+        "symfony/dom-crawler": "3.1.*"
     },
     "autoload": {
         "classmap": [
