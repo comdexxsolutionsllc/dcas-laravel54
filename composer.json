@@ -7,6 +7,11 @@
     "require": {
         "php": ">=5.6.4",
         "laravel/framework": "5.4.*",
+        "laravel/cashier": "~7.0",
+        "laravel/envoy": "~1.0",
+        "laravel/passport": "*",
+        "laravel/scout": "*",
+        "laravel/socialite": "*",
         "laravel/tinker": "~1.0",
         "nwidart/laravel-modules": "^1.13"
     },

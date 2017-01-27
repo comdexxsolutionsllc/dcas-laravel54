@@ -166,6 +166,10 @@ return [
         /*
          * Package Service Providers...
          */
+        Laravel\Cashier\CashierServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
+        Laravel\Scout\ScoutServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
         Laravel\Tinker\TinkerServiceProvider::class,
 
         /*
@@ -181,6 +185,7 @@ return [
          * Vendor Service Providers...
          */
         Nwidart\Modules\LaravelModulesServiceProvider::class,
+
 
     ],
 
@@ -235,6 +240,7 @@ return [
          * Vendor aliases...
          */
         'Module' => Nwidart\Modules\Facades\Module::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 
