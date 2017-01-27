@@ -13,7 +13,6 @@
         "mirzabusatlic/laravel-schedule-monitor": "^1.01",
         "nwidart/laravel-modules": "^1.13",
         "pragmarx/firewall": "^1.0",
-        "predis/predis": "^1.1",
         "pulkitjalan/geoip": "2.4.*",
         "spatie/laravel-fractal": "^3.0.0",
         "spatie/laravel-paginateroute": "^2.2",
