@@ -12,12 +12,19 @@ class User extends Authenticatable
     use Billable, HasApiTokens, Notifiable;
 
     /**
+     * The attributes that should be autocast to a Carbon instance.
+     *
+     * @var array
+     */
+    protected $dates = ['last_logged_in_at'];
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'last_logged_in_at',
     ];
 
     /**
