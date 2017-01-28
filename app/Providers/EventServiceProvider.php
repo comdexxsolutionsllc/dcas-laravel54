@@ -22,6 +22,12 @@ class EventServiceProvider extends ServiceProvider
         'Illuminate\Auth\Events\Logout' => [
             'App\Listeners\Users\UponLogoutUpdateLastLoggedInAt',
         ],
+        'Illuminate\Auth\Events\Lockout' => [
+            'App\Listeners\Users\UponLoginLockout',
+        ],
+        'Illuminate\Mail\Events\MessageSending' => [
+            'App\Listeners\LogSentMessage',
+        ],
     ];
 
     /**
