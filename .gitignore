@@ -7,6 +7,7 @@
 Homestead.json
 Homestead.yaml
 .env
+.env.bk
 /tests/_output/*
 git_tag
 /_ide_helper.php

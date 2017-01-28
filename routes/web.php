@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function ()
+{
     return view('welcome');
 });
 
@@ -21,11 +22,13 @@ Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 // Registration Routes... // null
-Route::get('register', function() {
+Route::get('register', function ()
+{
     abort(403, 'Unauthorized action.');
 })->name('register');
 
-Route::post('register', function() {
+Route::post('register', function ()
+{
     abort(403, 'Unauthorized action.');
 });
 
@@ -35,5 +38,12 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
+// User impersonate Routes...
+Route::get('/users/{id}/impersonate', 'UserController@impersonate');
+Route::get('/users/stop', 'UserController@stopImpersonate');
+
 // Other pages...
-Route::get('/home', 'HomeController@index');
+Route::group(['middleware' => 'impersonate'], function()
+{
+    Route::get('/home', 'HomeController@index');
+});

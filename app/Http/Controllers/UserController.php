@@ -1,0 +1,36 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Auth;
+use App\User;
+use Illuminate\Http\Request;
+
+class UserController extends Controller {
+
+    public function impersonate($id)
+    {
+        $user = User::find($id);
+
+        // Guard against administrator impersonate
+        if ( ! $user->isAdministrator())
+        {
+            Auth::user()->setImpersonating($user->id);
+        } else
+        {
+            flash()->error('Impersonate disabled for this user.');
+        }
+
+        return redirect()->back();
+    }
+
+
+    public function stopImpersonate()
+    {
+        Auth::user()->stopImpersonating();
+
+        flash()->success('Welcome back!');
+
+        return redirect()->back();
+    }
+}

@@ -6,9 +6,10 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Cashier\Billable;
 use Laravel\Passport\HasApiTokens;
+use Session;
 
-class User extends Authenticatable
-{
+class User extends Authenticatable {
+
     use Billable, HasApiTokens, Notifiable;
 
     /**
@@ -16,7 +17,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $dates = ['last_logged_in_at'];
+    protected $dates = [ 'last_logged_in_at' ];
 
     /**
      * The attributes that are mass assignable.
@@ -24,7 +25,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'last_logged_in_at',
+        'name',
+        'email',
+        'password',
+        'last_logged_in_at',
     ];
 
     /**
@@ -33,6 +37,77 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
+
+
+    /**
+     * Utility function to return last row of database.
+     *
+     * @return mixed
+     */
+    protected function last()
+    {
+        return $this::orderBy('created_at', 'desc')->first();
+    }
+
+
+    /**
+     * @return bool
+     */
+    public function isAdministrator()
+    {
+        return (\Auth::user()->id == 2); // TODO: Change this to your admin ID
+    }
+
+
+    /**
+     * Set Impersonating a User
+     *
+     * @param $id
+     */
+    public function setImpersonating($id)
+    {
+        Session::put('impersonate', $id);
+    }
+
+
+    /**
+     * Stop Impersonating a User
+     */
+    public function stopImpersonating()
+    {
+        Session::forget('impersonate');
+    }
+
+
+    /**
+     * Check if Impersonating
+     *
+     * @return mixed
+     */
+    public function isImpersonating()
+    {
+        return Session::has('impersonate');
+    }
+
+
+    /**
+     * @return mixed
+     * @example (in view): @if($user->isOnline()) user is online!! @endif
+     */
+    public function isOnline()
+    {
+        return Cache::has('user-is-online-'.$this->id);
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function username()
+    {
+        return \Auth::user()->username;
+    }
 }

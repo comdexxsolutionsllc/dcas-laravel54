@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Listeners;
+namespace App\Listeners\Mail;
 
 use Illuminate\Mail\Events\MessageSending;
 use Illuminate\Queue\InteractsWithQueue;
@@ -26,6 +26,7 @@ class LogSentMessage
      */
     public function handle(MessageSending $event)
     {
-        \Log::notice($event->message);
+        //\Log::notice($event->message);
+        return;
     }
 }

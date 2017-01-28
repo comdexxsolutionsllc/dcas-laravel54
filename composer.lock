@@ -2841,16 +2841,16 @@
         },
         {
             "name": "spatie/laravel-fractal",
-            "version": "3.3.0",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-fractal.git",
-                "reference": "cc09ad9a26f1cf9e769e7906c01b64fb568f1b91"
+                "reference": "b61276ed4a8cb418377ded396d0f933020bae104"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-fractal/zipball/cc09ad9a26f1cf9e769e7906c01b64fb568f1b91",
-                "reference": "cc09ad9a26f1cf9e769e7906c01b64fb568f1b91",
+                "url": "https://api.github.com/repos/spatie/laravel-fractal/zipball/b61276ed4a8cb418377ded396d0f933020bae104",
+                "reference": "b61276ed4a8cb418377ded396d0f933020bae104",
                 "shasum": ""
             },
             "require": {
@@ -2861,7 +2861,7 @@
             },
             "require-dev": {
                 "orchestra/testbench": "~3.2.0|3.3.0|~3.4.0",
-                "phpunit/phpunit": "^5.7"
+                "phpunit/phpunit": "^5.7.5"
             },
             "type": "library",
             "autoload": {
@@ -2895,7 +2895,7 @@
                 "spatie",
                 "transform"
             ],
-            "time": "2017-01-23T13:41:40+00:00"
+            "time": "2017-01-28T08:37:24+00:00"
         },
         {
             "name": "spatie/laravel-translation-loader",

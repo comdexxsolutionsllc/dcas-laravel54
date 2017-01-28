@@ -62,6 +62,10 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
+                                    @if(\Auth::user()->isImpersonating())
+                                        <li><a href="{{ url('/users/stop')  }}">Stop Impersonate</a></li>
+                                    @endif
+
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
