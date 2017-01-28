@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8bff0c145f5c69578d33f909d367205c",
+    "content-hash": "87ebaec71baf3f189e48e86320068c7e",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1899,6 +1899,91 @@
             "time": "2016-10-12T14:08:15+00:00"
         },
         {
+            "name": "league/pipeline",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/pipeline.git",
+                "reference": "27dc18166c30d6429c75d1320f41e8238c59c3d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/pipeline/zipball/27dc18166c30d6429c75d1320f41e8238c59c3d4",
+                "reference": "27dc18166c30d6429c75d1320f41e8238c59c3d4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "henrikbjorn/phpspec-code-coverage": "^1.0",
+                "phpspec/phpspec": "^2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\Pipeline\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
+                }
+            ],
+            "description": "A plug and play pipeline implementation.",
+            "keywords": [
+                "composition",
+                "design pattern",
+                "pattern",
+                "pipeline",
+                "sequential"
+            ],
+            "time": "2016-10-13T20:53:39+00:00"
+        },
+        {
+            "name": "mirzabusatlic/laravel-schedule-monitor",
+            "version": "v1.01",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mirzabusatlic/laravel-schedule-monitor.git",
+                "reference": "72408ed59eb5ca3317a59873b3b7578b598cf8bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mirzabusatlic/laravel-schedule-monitor/zipball/72408ed59eb5ca3317a59873b3b7578b598cf8bd",
+                "reference": "72408ed59eb5ca3317a59873b3b7578b598cf8bd",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": ">=5.0.0",
+                "illuminate/database": ">=5.0.0",
+                "illuminate/support": ">=5.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Busatlic\\ScheduleMonitor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Mirza Busatlic",
+                    "email": "mirza.busatlic@gmail.com"
+                }
+            ],
+            "description": "Monitor Scheduled Jobs in Laravel",
+            "time": "2016-07-11T12:26:54+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.22.0",
             "source": {
@@ -2811,6 +2896,64 @@
                 "transform"
             ],
             "time": "2017-01-23T13:41:40+00:00"
+        },
+        {
+            "name": "spatie/laravel-translation-loader",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-translation-loader.git",
+                "reference": "bac6e41a00b49d13ecece518a6be7634d995c96e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-translation-loader/zipball/bac6e41a00b49d13ecece518a6be7634d995c96e",
+                "reference": "bac6e41a00b49d13ecece518a6be7634d995c96e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/container": "~5.3.0|~5.4.0",
+                "illuminate/contracts": "~5.3.0|~5.4.0",
+                "illuminate/database": "~5.3.0|~5.4.0",
+                "illuminate/support": "~5.3.0|~5.4.0",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "orchestra/database": "~3.3.0|~3.4.0",
+                "orchestra/testbench": "~3.3.0|~3.4.0",
+                "phpunit/phpunit": "5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\TranslationLoader\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Store your language lines in the database, yaml or other sources",
+            "homepage": "https://github.com/spatie/laravel-translation-loader",
+            "keywords": [
+                "database",
+                "db",
+                "i8n",
+                "language",
+                "laravel",
+                "laravel-translation-loader",
+                "spatie",
+                "translate"
+            ],
+            "time": "2017-01-23T09:14:49+00:00"
         },
         {
             "name": "stripe/stripe-php",
