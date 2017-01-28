@@ -13,3 +13,4 @@ git_tag
 admin-test.token
 *__notes
 git_commands
+/_composer_pkgs.ignore
