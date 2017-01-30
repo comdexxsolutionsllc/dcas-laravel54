@@ -188,6 +188,7 @@ return [
         Nwidart\Modules\LaravelModulesServiceProvider::class,
         Busatlic\ScheduleMonitor\ScheduleMonitorServiceProvider::class,
         Spatie\TranslationLoader\TranslationServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
 
 
     ],
@@ -244,6 +245,7 @@ return [
          */
         'Module' => Nwidart\Modules\Facades\Module::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
 
     ],
 
