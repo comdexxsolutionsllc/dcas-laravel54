@@ -52,7 +52,9 @@ class HomeController extends Controller {
     {
         $users = Cache::remember('users', 10, function ()
         {
-            return DB::table('users')->get();
+            $query = DB::table('users')->select(DB::raw('id, name, email, last_logged_in_at, created_at, updated_at'))->get();
+
+            return $query;
         });
 
         return Datatables::of($users)->make(true);

@@ -50,4 +50,4 @@ Route::group(['middleware' => 'impersonate'], function()
 
 // Datatable routes...
 Route::get('datatables',['uses'=>'HomeController@getIndex', 'as' => 'datatables']);
-Route::get('datatables/data',['uses'=>'HomeController@anyData', 'as' => 'datatables.data']);
+Route::post('datatables/data',['uses'=>'HomeController@anyData', 'as' => 'datatables.data']);

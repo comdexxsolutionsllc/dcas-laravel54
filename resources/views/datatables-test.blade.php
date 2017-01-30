@@ -27,7 +27,10 @@
         $('#users-table').DataTable({
             processing: true,
             serverSide: true,
-            ajax: '{!! route('datatables.data') !!}',
+            ajax: {
+                "url": '{!! route('datatables.data') !!}',
+                "type": "POST"
+            },
             columns: [
                 { data: 'id', name: 'id' },
                 { data: 'name', name: 'name' },
