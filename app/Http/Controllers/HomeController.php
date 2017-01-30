@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Cache;
 use Datatables;
+use DB;
 use App\User;
 
 class HomeController extends Controller {
@@ -48,6 +50,11 @@ class HomeController extends Controller {
      */
     public function anyData()
     {
-        return Datatables::of(User::query())->make(true);
+        $users = Cache::remember('users', 10, function ()
+        {
+            return DB::table('users')->get();
+        });
+
+        return Datatables::of($users)->make(true);
     }
 }

@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Cashier\Billable;
 use Laravel\Passport\HasApiTokens;
 use Session;
+use Carbon\Carbon;
 
 class User extends Authenticatable {
 
@@ -17,7 +18,7 @@ class User extends Authenticatable {
      *
      * @var array
      */
-    protected $dates = [ 'last_logged_in_at' ];
+    protected $dates = [ 'last_logged_in_at', 'created_at', 'updated_at' ];
 
     /**
      * The attributes that are mass assignable.
@@ -50,6 +51,32 @@ class User extends Authenticatable {
     protected function last()
     {
         return $this::orderBy('created_at', 'desc')->first();
+    }
+
+
+    /**
+     * Get the user's updated at date.
+     *
+     * @param  string $value
+     *
+     * @return string
+     */
+    public function getUpdatedAtAttribute($value)
+    {
+        if (!is_null($value)) return Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans();
+    }
+
+
+    /**
+     * Get the user's last logged-in date.
+     *
+     * @param  string $value
+     *
+     * @return string
+     */
+    public function getLastLoggedInAtAttribute($value)
+    {
+        if (!is_null($value)) return Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans();
     }
 
 
