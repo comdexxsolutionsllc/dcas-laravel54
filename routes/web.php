@@ -27,11 +27,6 @@ Route::get('register', function ()
     abort(403, 'Unauthorized action.');
 })->name('register');
 
-Route::post('register', function ()
-{
-    abort(403, 'Unauthorized action.');
-});
-
 // Password Reset Routes...
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
