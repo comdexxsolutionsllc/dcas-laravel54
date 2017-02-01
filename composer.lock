@@ -1142,16 +1142,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.6",
+            "version": "v5.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "5913b960656d7f978605ff9c1513ffbfd190c173"
+                "reference": "3e226e3481aabe835626739a1507c8af17b76082"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/5913b960656d7f978605ff9c1513ffbfd190c173",
-                "reference": "5913b960656d7f978605ff9c1513ffbfd190c173",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/3e226e3481aabe835626739a1507c8af17b76082",
+                "reference": "3e226e3481aabe835626739a1507c8af17b76082",
                 "shasum": ""
             },
             "require": {
@@ -1267,7 +1267,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-01-27T19:27:15+00:00"
+            "time": "2017-02-01T14:45:01+00:00"
         },
         {
             "name": "laravel/passport",
@@ -1335,16 +1335,16 @@
         },
         {
             "name": "laravel/scout",
-            "version": "v3.0.0",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/scout.git",
-                "reference": "b793d0c3f23da82575e04c6b388d6cecc3a743bd"
+                "reference": "c742ada38f7056dba336dae441d9eaf11000cb76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/scout/zipball/b793d0c3f23da82575e04c6b388d6cecc3a743bd",
-                "reference": "b793d0c3f23da82575e04c6b388d6cecc3a743bd",
+                "url": "https://api.github.com/repos/laravel/scout/zipball/c742ada38f7056dba336dae441d9eaf11000cb76",
+                "reference": "c742ada38f7056dba336dae441d9eaf11000cb76",
                 "shasum": ""
             },
             "require": {
@@ -1391,7 +1391,7 @@
                 "laravel",
                 "search"
             ],
-            "time": "2017-01-24T13:54:21+00:00"
+            "time": "2017-02-01T16:57:41+00:00"
         },
         {
             "name": "laravel/socialite",
