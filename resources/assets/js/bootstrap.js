@@ -1,3 +1,5 @@
+import Echo from "laravel-echo"
+
 
 window._ = require('lodash');
 
@@ -36,9 +38,7 @@ window.axios.defaults.headers.common = {
  * allows your team to easily build robust real-time web applications.
  */
 
-// import Echo from "laravel-echo"
-
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: 'your-pusher-key'
-// });
+window.Echo = new Echo({
+    broadcaster: 'pusher',
+    key: '891846d40fb294f5555e'
+});

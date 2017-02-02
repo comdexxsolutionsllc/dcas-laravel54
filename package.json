@@ -26,6 +26,8 @@
     "vue-router": "^2.0.0"
   },
   "dependencies": {
-    "materialize-css": "^0.98.0"
+    "laravel-echo": "^1.2.3",
+    "materialize-css": "^0.98.0",
+    "pusher-js": "^4.0.0"
   }
 }

@@ -23,6 +23,7 @@
         "mirzabusatlic/laravel-schedule-monitor": "^1.01",
         "nwidart/laravel-modules": "^1.13",
         "predis/predis": "^1.1",
+        "pusher/pusher-php-server": "^2.6",
         "spatie/laravel-fractal": "^3.0.0",
         "spatie/laravel-translation-loader": "^1.1",
         "stripe/stripe-php": "~3.0",
