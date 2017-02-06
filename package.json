@@ -26,8 +26,11 @@
     "vue-router": "^2.0.0"
   },
   "dependencies": {
+    "foundation": "^4.2.1-1",
     "laravel-echo": "^1.2.3",
+    "materialize": "^1.0.0",
     "materialize-css": "^0.98.0",
-    "pusher-js": "^4.0.0"
+    "pusher-js": "^4.0.0",
+    "underscore": "^1.8.3"
   }
 }

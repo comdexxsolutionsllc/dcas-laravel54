@@ -26,7 +26,6 @@
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 @include('flash::message')
-{{ $user->name }}
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->

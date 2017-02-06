@@ -8,10 +8,11 @@ use Laravel\Cashier\Billable;
 use Laravel\Passport\HasApiTokens;
 use Session;
 use Carbon\Carbon;
+use Cmgmyr\Messenger\Traits\Messagable;
 
 class User extends Authenticatable {
 
-    use Billable, HasApiTokens, Notifiable;
+    use Billable, HasApiTokens, Messagable, Notifiable;
 
     /**
      * The attributes that should be autocast to a Carbon instance.
@@ -63,7 +64,10 @@ class User extends Authenticatable {
      */
     public function getUpdatedAtAttribute($value)
     {
-        if (!is_null($value)) return Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans();
+        if ( ! is_null($value))
+        {
+            return Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans();
+        }
     }
 
 
@@ -76,7 +80,10 @@ class User extends Authenticatable {
      */
     public function getLastLoggedInAtAttribute($value)
     {
-        if (!is_null($value)) return Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans();
+        if ( ! is_null($value))
+        {
+            return Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans();
+        }
     }
 
 

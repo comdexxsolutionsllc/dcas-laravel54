@@ -189,6 +189,8 @@ return [
         Busatlic\ScheduleMonitor\ScheduleMonitorServiceProvider::class,
         Spatie\TranslationLoader\TranslationServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
+        Cmgmyr\Messenger\MessengerServiceProvider::class,
+
 
 
     ],
