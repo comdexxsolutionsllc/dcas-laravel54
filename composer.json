@@ -28,7 +28,8 @@
         "spatie/laravel-translation-loader": "^1.1",
         "stripe/stripe-php": "~3.0",
         "yajra/laravel-datatables-oracle": "^7.0",
-        "cmgmyr/messenger": "2.13.*"
+        "cmgmyr/messenger": "2.13.*",
+        "laravelcollective/html": "*"
     },
     "require-dev": {
         "codeception/codeception": "*",

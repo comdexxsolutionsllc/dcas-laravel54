@@ -4,11 +4,12 @@
     "description": "",
     "keywords": [],
     "active": 1,
-    "order": 0,
+    "order": 3,
     "providers": [
         "Modules\\Messenger\\Providers\\MessengerServiceProvider"
     ],
-    "aliases": {},
+    "aliases": {
+    },
     "files": [
         "start.php"
     ],

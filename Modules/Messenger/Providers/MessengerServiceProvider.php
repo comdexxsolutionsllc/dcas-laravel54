@@ -4,14 +4,15 @@ namespace Modules\Messenger\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class MessengerServiceProvider extends ServiceProvider
-{
+class MessengerServiceProvider extends ServiceProvider {
+
     /**
      * Indicates if loading of the provider is deferred.
      *
      * @var bool
      */
     protected $defer = false;
+
 
     /**
      * Boot the application events.
@@ -25,6 +26,7 @@ class MessengerServiceProvider extends ServiceProvider
         $this->registerViews();
     }
 
+
     /**
      * Register the service provider.
      *
@@ -34,6 +36,7 @@ class MessengerServiceProvider extends ServiceProvider
     {
         //
     }
+
 
     /**
      * Register config.
@@ -45,10 +48,9 @@ class MessengerServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../Config/config.php' => config_path('messenger.php'),
         ], 'config');
-        $this->mergeConfigFrom(
-            __DIR__.'/../Config/config.php', 'messenger'
-        );
+        $this->mergeConfigFrom(__DIR__.'/../Config/config.php', 'messenger');
     }
+
 
     /**
      * Register views.
@@ -65,10 +67,12 @@ class MessengerServiceProvider extends ServiceProvider
             $sourcePath => $viewPath
         ]);
 
-        $this->loadViewsFrom(array_merge(array_map(function ($path) {
-            return $path . '/modules/messenger';
-        }, \Config::get('view.paths')), [$sourcePath]), 'messenger');
+        $this->loadViewsFrom(array_merge(array_map(function ($path)
+        {
+            return $path.'/modules/messenger';
+        }, \Config::get('view.paths')), [ $sourcePath ]), 'messenger');
     }
+
 
     /**
      * Register translations.
@@ -79,12 +83,15 @@ class MessengerServiceProvider extends ServiceProvider
     {
         $langPath = base_path('resources/lang/modules/messenger');
 
-        if (is_dir($langPath)) {
+        if (is_dir($langPath))
+        {
             $this->loadTranslationsFrom($langPath, 'messenger');
-        } else {
-            $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', 'messenger');
+        } else
+        {
+            $this->loadTranslationsFrom(__DIR__.'/../Resources/lang', 'messenger');
         }
     }
+
 
     /**
      * Get the services provided by the provider.

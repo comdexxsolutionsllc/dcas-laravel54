@@ -190,6 +190,7 @@ return [
         Spatie\TranslationLoader\TranslationServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
         Cmgmyr\Messenger\MessengerServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
 
 
@@ -248,6 +249,8 @@ return [
         'Module' => Nwidart\Modules\Facades\Module::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 

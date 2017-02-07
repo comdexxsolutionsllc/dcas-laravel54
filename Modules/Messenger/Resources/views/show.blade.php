@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('messenger::layouts.master')
 
 @section('content')
     <div class="col-md-6">
