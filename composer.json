@@ -29,7 +29,8 @@
         "stripe/stripe-php": "~3.0",
         "yajra/laravel-datatables-oracle": "^7.0",
         "cmgmyr/messenger": "2.13.*",
-        "laravelcollective/html": "*"
+        "laravelcollective/html": "*",
+        "zizaco/entrust": "5.2.x-dev"
     },
     "require-dev": {
         "codeception/codeception": "*",

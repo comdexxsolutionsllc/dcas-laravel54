@@ -9,10 +9,11 @@ use Laravel\Passport\HasApiTokens;
 use Session;
 use Carbon\Carbon;
 use Cmgmyr\Messenger\Traits\Messagable;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable {
 
-    use Billable, HasApiTokens, Messagable, Notifiable;
+    use Billable, EntrustUserTrait, HasApiTokens, Messagable, Notifiable;
 
     /**
      * The attributes that should be autocast to a Carbon instance.

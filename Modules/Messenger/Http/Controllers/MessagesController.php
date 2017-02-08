@@ -30,6 +30,11 @@ class MessagesController extends \App\Http\Controllers\Controller {
      */
     public function index()
     {
+        //dd([
+        //    'main' => \Optimus::connection('main')->encode('5656565656599494949'),
+        //    'alternative' => \Optimus::connection('alternative')->encode('5656565656599494949')
+        //]);
+        //
         $currentUserId = auth()->user()->id;
 
         // All threads, ignore deleted/archived participants
