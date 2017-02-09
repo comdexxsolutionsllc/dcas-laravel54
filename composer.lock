@@ -1326,16 +1326,16 @@
         },
         {
             "name": "laravel/passport",
-            "version": "v2.0.2",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/passport.git",
-                "reference": "2f834e286ca51d1ffbb5c3e657131451b04a577d"
+                "reference": "72f3c0e4ae6b283bd71c8050eb0d438e3880e4c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/passport/zipball/2f834e286ca51d1ffbb5c3e657131451b04a577d",
-                "reference": "2f834e286ca51d1ffbb5c3e657131451b04a577d",
+                "url": "https://api.github.com/repos/laravel/passport/zipball/72f3c0e4ae6b283bd71c8050eb0d438e3880e4c7",
+                "reference": "72f3c0e4ae6b283bd71c8050eb0d438e3880e4c7",
                 "shasum": ""
             },
             "require": {
@@ -1362,7 +1362,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -1386,7 +1386,7 @@
                 "oauth",
                 "passport"
             ],
-            "time": "2017-02-05T15:14:24+00:00"
+            "time": "2017-02-08T22:33:21+00:00"
         },
         {
             "name": "laravel/scout",

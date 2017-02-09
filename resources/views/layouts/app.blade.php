@@ -97,5 +97,33 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <!-- App scripts -->
     @stack('scripts')
+
+    @if (Auth::check())
+    <!-- Login timer for logout -->
+    <script>
+        var idleTime = 0;
+        $(document).ready(function () {
+            //Increment the idle time counter every minute.
+            var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+
+            //Zero the idle timer on mouse movement.
+            $(this).mousemove(function (e) {
+                idleTime = 0;
+            });
+            $(this).keypress(function (e) {
+                idleTime = 0;
+            });
+        });
+
+        function timerIncrement() {
+            idleTime++;
+            if (idleTime > 14) { // 15 minutes
+                axios.post('https://www.sarahrenner.work/logout').then(function (response) {
+                    window.location.replace(document.location.protocol + "//" + document.location.hostname + "/login");
+                });
+            }
+        }
+    </script>
+    @endif
 </body>
 </html>

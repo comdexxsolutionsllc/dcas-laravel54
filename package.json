@@ -31,6 +31,7 @@
     "materialize": "^1.0.0",
     "materialize-css": "^0.98.0",
     "pusher-js": "^4.0.0",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "vue-resource": "^0.9.3"
   }
 }
