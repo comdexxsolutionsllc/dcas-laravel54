@@ -1,0 +1,6 @@
+suites:
+    dumplie_customer:
+        namespace: DCASDomain
+        spec_path: ./app
+        spec_prefix: Spec
+        src_path: ./app

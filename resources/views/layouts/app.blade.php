@@ -100,28 +100,30 @@
 
     @if (Auth::check())
     <!-- Login timer for logout -->
+    <script>function timerIncrement(){idleTime++,idleTime>14&&axios.post("https://www.sarahrenner.work/logout").then(function(){window.location.replace(document.location.protocol+"//"+document.location.hostname+"/login")})}var idleTime=0;$(document).ready(function(){setInterval(timerIncrement,6e4);$(this).mousemove(function(){console.log("Event mousemove"),idleTime=0}),$(this).keypress(function(){console.log("Event keypress"),idleTime=0})});</script>
     <script>
-        var idleTime = 0;
-        $(document).ready(function () {
-            //Increment the idle time counter every minute.
-            var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
-
-            //Zero the idle timer on mouse movement.
-            $(this).mousemove(function (e) {
-                idleTime = 0;
-            });
-            $(this).keypress(function (e) {
-                idleTime = 0;
-            });
+        $( '.js-click-post' ).click(function(e) {
+            e.preventDefault; // Prevent the default behavior of the  element.
+            var post = $(this).closest('.media-heading'); // Find the parent .post element
+            var postId = post.attr('data-post-id'); // Get the post ID from our data attribute
+            registerPostClick(postId); // Pass that ID to our function.
         });
 
-        function timerIncrement() {
-            idleTime++;
-            if (idleTime > 14) { // 15 minutes
-                axios.post('https://www.sarahrenner.work/logout').then(function (response) {
-                    window.location.replace(document.location.protocol + "//" + document.location.hostname + "/login");
-                });
-            }
+        function registerPostClick(postId) {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                }
+            })
+            $.ajax({
+                type: 'post',
+                dataType: 'JSON',
+                url: '/messenger/messages/' + postId + '/click',
+                error: function (xhr, ajaxOptions, thrownError) {
+                    console.log(xhr.status);
+                    console.log(JSON.stringify(xhr.responseText));
+                }
+            });
         }
     </script>
     @endif

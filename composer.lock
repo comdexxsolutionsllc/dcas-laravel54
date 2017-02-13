@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f8a69b916d3548fac775a01a23d6cf9",
+    "content-hash": "6f357e64376e704a504d5690eaea3a76",
     "packages": [
         {
             "name": "cmgmyr/messenger",
-            "version": "2.13.2",
+            "version": "2.13.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cmgmyr/laravel-messenger.git",
-                "reference": "16d99c7ce461c7d27b62e0afb6f42e8d028042c6"
+                "reference": "097a57ea96353df195805b4948fa9c51daf43d45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cmgmyr/laravel-messenger/zipball/16d99c7ce461c7d27b62e0afb6f42e8d028042c6",
-                "reference": "16d99c7ce461c7d27b62e0afb6f42e8d028042c6",
+                "url": "https://api.github.com/repos/cmgmyr/laravel-messenger/zipball/097a57ea96353df195805b4948fa9c51daf43d45",
+                "reference": "097a57ea96353df195805b4948fa9c51daf43d45",
                 "shasum": ""
             },
             "require": {
@@ -59,7 +59,7 @@
                 "messaging",
                 "user messaging"
             ],
-            "time": "2016-12-02T21:32:57+00:00"
+            "time": "2017-01-07T23:40:19+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -998,6 +998,56 @@
             "time": "2015-04-20T18:58:01+00:00"
         },
         {
+            "name": "kim/activity",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thomastkim/laravel-online-users.git",
+                "reference": "840d55e727349b7ac206005c021e1f0190a68c6f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thomastkim/laravel-online-users/zipball/840d55e727349b7ac206005c021e1f0190a68c6f",
+                "reference": "840d55e727349b7ac206005c021e1f0190a68c6f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^5.2",
+                "illuminate/session": "^5.2",
+                "illuminate/support": "^5.2",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kim\\": "src/Kim"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Kim",
+                    "email": "thomas@thomastkim.com",
+                    "homepage": "http://thomastkim.com"
+                }
+            ],
+            "description": "Easily retrieve a list of users and guests that are online.",
+            "homepage": "https://github.com/thomastkim/laravel-online-users",
+            "keywords": [
+                "laravel",
+                "online activity",
+                "php"
+            ],
+            "time": "2016-04-18T23:27:58+00:00"
+        },
+        {
             "name": "laracasts/flash",
             "version": "2.0.1",
             "source": {
@@ -1197,16 +1247,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.10",
+            "version": "v5.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "4c8837046c998925972c8010bfac435c4be5facc"
+                "reference": "9cee8db07cfac13a3a49d17388c9ced4c52e17ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/4c8837046c998925972c8010bfac435c4be5facc",
-                "reference": "4c8837046c998925972c8010bfac435c4be5facc",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/9cee8db07cfac13a3a49d17388c9ced4c52e17ac",
+                "reference": "9cee8db07cfac13a3a49d17388c9ced4c52e17ac",
                 "shasum": ""
             },
             "require": {
@@ -1322,7 +1372,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-02-08T15:01:52+00:00"
+            "time": "2017-02-10T19:40:54+00:00"
         },
         {
             "name": "laravel/passport",
@@ -1724,16 +1774,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.34",
+            "version": "1.0.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "469ad53c13ea19a0e54e3e5d70f61227ddcc0299"
+                "reference": "dda7f3ab94158a002d9846a97dc18ebfb7acc062"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/469ad53c13ea19a0e54e3e5d70f61227ddcc0299",
-                "reference": "469ad53c13ea19a0e54e3e5d70f61227ddcc0299",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/dda7f3ab94158a002d9846a97dc18ebfb7acc062",
+                "reference": "dda7f3ab94158a002d9846a97dc18ebfb7acc062",
                 "shasum": ""
             },
             "require": {
@@ -1803,7 +1853,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2017-01-30T17:41:17+00:00"
+            "time": "2017-02-09T11:33:58+00:00"
         },
         {
             "name": "league/fractal",
@@ -2319,16 +2369,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v3.0.3",
+            "version": "v3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "5b8182cc0abb4b0ff290ba9df6c0e1323286013a"
+                "reference": "0bf561dfe75ba80441c22adecc0529056671a7d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/5b8182cc0abb4b0ff290ba9df6c0e1323286013a",
-                "reference": "5b8182cc0abb4b0ff290ba9df6c0e1323286013a",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/0bf561dfe75ba80441c22adecc0529056671a7d2",
+                "reference": "0bf561dfe75ba80441c22adecc0529056671a7d2",
                 "shasum": ""
             },
             "require": {
@@ -2366,7 +2416,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2017-02-03T21:57:31+00:00"
+            "time": "2017-02-10T20:20:03+00:00"
         },
         {
             "name": "nwidart/laravel-modules",
@@ -4630,16 +4680,16 @@
         },
         {
             "name": "mockery/mockery",
-            "version": "0.9.7",
+            "version": "0.9.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "4de7969f4664da3cef1ccd83866c9f59378c3371"
+                "reference": "1e5e2ffdc4d71d7358ed58a6fdd30a4a0c506855"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/4de7969f4664da3cef1ccd83866c9f59378c3371",
-                "reference": "4de7969f4664da3cef1ccd83866c9f59378c3371",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/1e5e2ffdc4d71d7358ed58a6fdd30a4a0c506855",
+                "reference": "1e5e2ffdc4d71d7358ed58a6fdd30a4a0c506855",
                 "shasum": ""
             },
             "require": {
@@ -4691,7 +4741,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2016-12-19T14:50:55+00:00"
+            "time": "2017-02-09T13:29:38+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -5310,16 +5360,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.12",
+            "version": "5.7.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "944600e244f80a5252679878553b95c63dbf978b"
+                "reference": "60ebeed87a35ea46fd7f7d8029df2d6f013ebb34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/944600e244f80a5252679878553b95c63dbf978b",
-                "reference": "944600e244f80a5252679878553b95c63dbf978b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/60ebeed87a35ea46fd7f7d8029df2d6f013ebb34",
+                "reference": "60ebeed87a35ea46fd7f7d8029df2d6f013ebb34",
                 "shasum": ""
             },
             "require": {
@@ -5388,7 +5438,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-02-08T05:54:05+00:00"
+            "time": "2017-02-10T09:05:10+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

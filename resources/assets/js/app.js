@@ -30,6 +30,11 @@ Vue.component(
     require('./components/passport/PersonalAccessTokens.vue')
 );
 
+Vue.component(
+    'online-users',
+    require('./components/OnlineUsers.vue')
+);
+
 const app = new Vue({
     el: '#app'
 });

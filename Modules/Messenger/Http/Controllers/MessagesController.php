@@ -100,22 +100,22 @@ class MessagesController extends \App\Http\Controllers\Controller {
         $input = Input::all();
 
         $thread = Thread::create([
-                'subject' => $input['subject'],
-            ]);
+            'subject' => $input['subject'],
+        ]);
 
         // Message
         Message::create([
-                'thread_id' => $thread->id,
-                'user_id'   => Auth::user()->id,
-                'body'      => $input['message'],
-            ]);
+            'thread_id' => $thread->id,
+            'user_id'   => Auth::user()->id,
+            'body'      => $input['message'],
+        ]);
 
         // Sender
         Participant::create([
-                'thread_id' => $thread->id,
-                'user_id'   => Auth::user()->id,
-                'last_read' => new Carbon,
-            ]);
+            'thread_id' => $thread->id,
+            'user_id'   => Auth::user()->id,
+            'last_read' => new Carbon,
+        ]);
 
         // Recipients
         if (Input::has('recipients'))
@@ -150,16 +150,16 @@ class MessagesController extends \App\Http\Controllers\Controller {
 
         // Message
         Message::create([
-                'thread_id' => $thread->id,
-                'user_id'   => Auth::id(),
-                'body'      => Input::get('message'),
-            ]);
+            'thread_id' => $thread->id,
+            'user_id'   => Auth::id(),
+            'body'      => Input::get('message'),
+        ]);
 
         // Add replier as a participant
         $participant = Participant::firstOrCreate([
-                'thread_id' => $thread->id,
-                'user_id'   => Auth::user()->id,
-            ]);
+            'thread_id' => $thread->id,
+            'user_id'   => Auth::user()->id,
+        ]);
         $participant->last_read = new Carbon;
         $participant->save();
 
@@ -170,5 +170,18 @@ class MessagesController extends \App\Http\Controllers\Controller {
         }
 
         return redirect('/messenger/messages/'.$id);
+    }
+
+
+    /**
+     * Increment message clicks
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function clickPost($id)
+    {
+        $message = Message::findorfail($id); // Find our message by ID.
+        $message->increment('clicks'); // Increment the value in the clicks column.
+        $message->update(); // Save our updated message.
     }
 }

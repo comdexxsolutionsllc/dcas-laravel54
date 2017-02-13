@@ -13,4 +13,6 @@ Route::group([
     Route::post('/', [ 'as' => 'messages.store', 'uses' => 'MessagesController@store' ]);
     Route::get('{id}', [ 'as' => 'messages.show', 'uses' => 'MessagesController@show' ]);
     Route::put('{id}', [ 'as' => 'messages.update', 'uses' => 'MessagesController@update' ]);
+
+    Route::get('{id}/click', 'MessagesController@clickPost');
 });

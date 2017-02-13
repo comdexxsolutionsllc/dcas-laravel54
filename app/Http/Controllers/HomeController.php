@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Activity;
 use Cache;
 use Datatables;
 use DB;
-use App\User;
 
 class HomeController extends Controller {
 
@@ -28,7 +28,11 @@ class HomeController extends Controller {
      */
     public function index()
     {
-        return view('home');
+        $activities = Activity::users(15)->mostRecent()->get();
+        $numberOfUsers = Activity::users()->count();
+        $numberOfGuests = Activity::guests()->count();
+
+        return view('home', compact('activities', 'numberOfUsers', 'numberOfGuests'));
     }
 
 

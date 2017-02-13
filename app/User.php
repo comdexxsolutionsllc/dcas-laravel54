@@ -130,16 +130,6 @@ class User extends Authenticatable {
 
     /**
      * @return mixed
-     * @example (in view): @if($user->isOnline()) user is online!! @endif
-     */
-    public function isOnline()
-    {
-        return Cache::has('user-is-online-'.$this->id);
-    }
-
-
-    /**
-     * @return mixed
      */
     public function username()
     {

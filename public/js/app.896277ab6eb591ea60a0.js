@@ -11548,6 +11548,8 @@ Vue.component('passport-authorized-clients', __webpack_require__(43));
 
 Vue.component('passport-personal-access-tokens', __webpack_require__(45));
 
+Vue.component('online-users', __webpack_require__(64));
+
 var app = new Vue({
     el: '#app'
 });
@@ -45996,6 +45998,98 @@ module.exports = function(module) {
 __webpack_require__(13);
 module.exports = __webpack_require__(14);
 
+
+/***/ }),
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = {
+    mounted: function mounted() {
+        console.log('Component mounted.');
+    }
+};
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(5)(
+  /* name */
+  "OnlineUsers",
+  /* script */
+  __webpack_require__(63),
+  /* template */
+  __webpack_require__(65),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/home/shine/public_html/dcas/resources/assets/js/components/OnlineUsers.vue"
+if (Component.options.functional) {console.error("[vue-loader] OnlineUsers.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6133768d", Component.options)
+  } else {
+    hotAPI.reload("data-v-6133768d", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    staticClass: "panel panel-default"
+  }, [_c('div', {
+    staticClass: "panel-heading"
+  }, [_vm._v("\n            Online Users\n        ")]), _vm._v(" "), _c('div', {
+    staticClass: "panel-body"
+  })])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-6133768d", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

@@ -49,5 +49,35 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    @if (Auth::check())
+      <!-- Login timer for logout -->
+      <script>function timerIncrement(){idleTime++,idleTime>14&&axios.post("https://www.sarahrenner.work/logout").then(function(){window.location.replace(document.location.protocol+"//"+document.location.hostname+"/login")})}var idleTime=0;$(document).ready(function(){setInterval(timerIncrement,6e4);$(this).mousemove(function(){console.log("Event mousemove"),idleTime=0}),$(this).keypress(function(){console.log("Event keypress"),idleTime=0})});</script>
+      <script>
+          $( '.js-click-post' ).click(function(e) {
+              e.preventDefault; // Prevent the default behavior of the  element.
+              var post = $(this).closest('.media-heading'); // Find the parent .post element
+              var postId = post.attr('data-post-id'); // Get the post ID from our data attribute
+              registerPostClick(postId); // Pass that ID to our function.
+          });
+
+          function registerPostClick(postId) {
+              $.ajaxSetup({
+                  headers: {
+                      'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                  }
+              })
+              $.ajax({
+                  type: 'post',
+                  dataType: 'JSON',
+                  url: '/messenger/messages/' + postId + '/click',
+                  error: function (xhr, ajaxOptions, thrownError) {
+                      console.log(xhr.status);
+                      console.log(JSON.stringify(xhr.responseText));
+                  }
+              });
+          }
+      </script>
+    @endif
   </body>
 </html>

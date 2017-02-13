@@ -192,9 +192,7 @@ return [
         Cmgmyr\Messenger\MessengerServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Zizaco\Entrust\EntrustServiceProvider::class,
-
-
-
+        Kim\Activity\ActivityServiceProvider::class
 
     ],
 
@@ -254,8 +252,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
-
-
+        'Activity' => Kim\Activity\ActivityFacade::class
 
     ],
 
