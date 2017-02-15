@@ -58,7 +58,8 @@
     "concurrency": 5,
     "failFast": true,
     "tap": false,
-    "powerAssert": false
+    "powerAssert": false,
+    "verbose": true
   },
   "babel": {
     "presets": [
