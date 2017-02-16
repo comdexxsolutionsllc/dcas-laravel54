@@ -41,14 +41,19 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
         return $this->visit('/');
     }
 
-
     /**
-     * @Then I can do something with Laravel
+     * @Then I can confirm testing environment is setup
      */
-    public function iCanDoSomethingWithLaravel()
+    public function iCanConfirmTestingEnvironmentIsSetup()
     {
         PHPUnit::assertEquals('.env.behat', app()->environmentFile());
         PHPUnit::assertEquals('acceptance', env('APP_ENV'));
         PHPUnit::assertEquals(true, env('APP_DEBUG'));
+
+        return var_dump ([
+            'env_file' => app()->environmentFile(),
+            'env' => env('APP_ENV'),
+            'env_debug' => env('APP_DEBUG')
+        ]);
     }
 }
