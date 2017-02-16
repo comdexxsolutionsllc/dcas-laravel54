@@ -1247,16 +1247,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.11",
+            "version": "v5.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "9cee8db07cfac13a3a49d17388c9ced4c52e17ac"
+                "reference": "707f32d32dce58232f7a860e0a1d62caf6f9dbfc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/9cee8db07cfac13a3a49d17388c9ced4c52e17ac",
-                "reference": "9cee8db07cfac13a3a49d17388c9ced4c52e17ac",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/707f32d32dce58232f7a860e0a1d62caf6f9dbfc",
+                "reference": "707f32d32dce58232f7a860e0a1d62caf6f9dbfc",
                 "shasum": ""
             },
             "require": {
@@ -1372,20 +1372,20 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-02-10T19:40:54+00:00"
+            "time": "2017-02-15T14:31:32+00:00"
         },
         {
             "name": "laravel/passport",
-            "version": "v2.0.3",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/passport.git",
-                "reference": "72f3c0e4ae6b283bd71c8050eb0d438e3880e4c7"
+                "reference": "5a3c705f89f92a26a9a66c2de010d0f3618e3579"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/passport/zipball/72f3c0e4ae6b283bd71c8050eb0d438e3880e4c7",
-                "reference": "72f3c0e4ae6b283bd71c8050eb0d438e3880e4c7",
+                "url": "https://api.github.com/repos/laravel/passport/zipball/5a3c705f89f92a26a9a66c2de010d0f3618e3579",
+                "reference": "5a3c705f89f92a26a9a66c2de010d0f3618e3579",
                 "shasum": ""
             },
             "require": {
@@ -1436,7 +1436,7 @@
                 "oauth",
                 "passport"
             ],
-            "time": "2017-02-08T22:33:21+00:00"
+            "time": "2017-02-14T13:39:28+00:00"
         },
         {
             "name": "laravel/scout",

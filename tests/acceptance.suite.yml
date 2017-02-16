@@ -1,0 +1,7 @@
+class_name: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver:
+            url: 'http://www.sarahrenner.work/' # put your local url
+            browser: firefox
+        - \Helper\Acceptance
