@@ -11,8 +11,10 @@ use Behat\Gherkin\Node\TableNode;
 use Behat\Mink\Driver\Selenium2Driver;
 use Laracasts\Behat\Context\DatabaseTransactions;
 use Laracasts\Behat\Context\Migrator;
-use Knp\FriendlyContexts\Context\MinkContext;
+//use Knp\FriendlyContexts\Context\MinkContext;
 use PHPUnit_Framework_Assert as PHPUnit;
+use Behat\MinkExtension\Context\MinkContext;
+
 
 /**
  * Defines application features from the specific context.
