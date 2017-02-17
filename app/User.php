@@ -20,7 +20,7 @@ class User extends Authenticatable {
      *
      * @var array
      */
-    protected $dates = [ 'last_logged_in_at', 'created_at', 'updated_at' ];
+    protected $dates = [ 'last_logged_in_at', 'trial_ends_at', 'ends_at', 'created_at', 'updated_at' ];
 
     /**
      * The attributes that are mass assignable.

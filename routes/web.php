@@ -46,3 +46,7 @@ Route::group(['middleware' => 'impersonate'], function()
 // Datatable routes...
 Route::get('datatables',['uses'=>'HomeController@getIndex', 'as' => 'datatables']);
 Route::post('datatables/data',['uses'=>'HomeController@anyData', 'as' => 'datatables.data']);
+
+// Stripe
+Route::get('purchases', 'PurchasesController@index');
+Route::post('purchases', 'PurchasesController@store')->name('purchases.post');

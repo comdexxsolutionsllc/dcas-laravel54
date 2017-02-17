@@ -5,3 +5,12 @@ default:
         Behat\MinkExtension:
             default_session: laravel
             laravel: ~
+#    formatter:
+#        name:                       pretty
+#        parameters:
+#            decorated:              true
+#            verbose:                false
+#            time:                   true
+#            language:               en
+#            output_path:            null
+#            multiline_arguments:    true
