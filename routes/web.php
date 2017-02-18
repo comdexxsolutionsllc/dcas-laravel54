@@ -11,42 +11,16 @@
 |
 */
 
+require_once('web_authentication.php');
+require_once('web_impersonate.php');
+require_once('web_cashier.php');
+
 Route::get('/', function ()
 {
     return view('welcome');
 });
 
-// Authentication Routes...
-Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
-Route::post('login', 'Auth\LoginController@login');
-Route::post('logout', 'Auth\LoginController@logout')->name('logout');
-
-// Registration Routes... // null
-Route::get('register', function ()
-{
-    abort(403, 'Unauthorized action.');
-})->name('register');
-
-// Password Reset Routes...
-Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
-Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
-Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-Route::post('password/reset', 'Auth\ResetPasswordController@reset');
-
-// User impersonate Routes...
-Route::get('/users/{id}/impersonate', 'UserController@impersonate');
-Route::get('/users/stop', 'UserController@stopImpersonate');
-
-// Other pages...
-Route::group(['middleware' => 'impersonate'], function()
-{
-    Route::get('/home', 'HomeController@index');
-});
 
 // Datatable routes...
 Route::get('datatables',['uses'=>'HomeController@getIndex', 'as' => 'datatables']);
 Route::post('datatables/data',['uses'=>'HomeController@anyData', 'as' => 'datatables.data']);
-
-// Stripe
-Route::get('purchases', 'PurchasesController@index');
-Route::post('purchases', 'PurchasesController@store')->name('purchases.post');
