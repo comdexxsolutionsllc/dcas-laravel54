@@ -14,7 +14,13 @@ class ApiController extends Controller
      */
     public function index()
     {
-        return view('api::index');
+        return [
+            'message' => 'api.sarahrenner.work/v1/',
+            'response_type' => 'json',
+            'http_code' => 200
+        ];
+
+        //return view('api::index');
     }
 
     /**
@@ -23,7 +29,7 @@ class ApiController extends Controller
      */
     public function create()
     {
-        return view('api::create');
+        //return view('api::create');
     }
 
     /**
@@ -41,7 +47,7 @@ class ApiController extends Controller
      */
     public function show()
     {
-        return view('api::show');
+        //return view('api::show');
     }
 
     /**
@@ -50,7 +56,7 @@ class ApiController extends Controller
      */
     public function edit()
     {
-        return view('api::edit');
+        //return view('api::edit');
     }
 
     /**

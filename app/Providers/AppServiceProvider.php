@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        \View::composer('layouts.app', function($view)
+        \View::composer('layouts.app', function ($view)
         {
             $view->with('users', \App\User::all());
         });
@@ -27,6 +27,10 @@ class AppServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        //
+        if ($this->app->environment() == 'development')
+        {
+            $this->app->register(\Iber\Generator\ModelGeneratorProvider::class);
+            $this->app->register(\MaddHatter\ViewGenerator\ServiceProvider::class);
+        }
     }
 }

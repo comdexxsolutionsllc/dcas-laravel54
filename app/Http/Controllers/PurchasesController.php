@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Stripe\
-{
-    Stripe, Charge, Customer
-};
 use Auth;
+use Illuminate\Http\Request;
+use Menu;
+use Stripe\Stripe;
 
 class PurchasesController extends Controller {
-    protected $user;
 
     /**
      * Create a new controller instance.
@@ -30,6 +27,16 @@ class PurchasesController extends Controller {
      */
     public function index()
     {
+        Menu::make('MyNavBar', function ($menu)
+        {
+
+            $menu->add('Home');
+            $menu->add('About', 'about');
+            $menu->add('services', 'services');
+            $menu->add('Contact', 'contact');
+
+        });
+
         $stripe_key = config('services.stripe.key');
 
         return view('stripe-test', compact('stripe_key'));

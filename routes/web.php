@@ -24,3 +24,6 @@ Route::get('/', function ()
 // Datatable routes...
 Route::get('datatables',['uses'=>'HomeController@getIndex', 'as' => 'datatables']);
 Route::post('datatables/data',['uses'=>'HomeController@anyData', 'as' => 'datatables.data']);
+
+// Role routes...
+Route::resource('role', 'RoleController');

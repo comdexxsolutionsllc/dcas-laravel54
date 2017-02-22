@@ -5,7 +5,7 @@ import Vuex from 'vuex'
 import VueViewports from 'vue-viewports'
 
 
-window._ = require('lodash');
+// window._ = require('lodash');
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -26,7 +26,7 @@ window.Vue = require('vue');
 require('vue-resource');
 
 Vue.use(Vuex)
-Vue.use(VueViewports, { 420: 'mobile', 768: 'tablet', 1024: 'desktop', 1920: 'hd-desktop', 2560: 'qhd-desktop', 3840: 'uhd-desktop' })
+// Vue.use(VueViewports, { 420: 'mobile', 768: 'tablet', 1024: 'desktop', 1920: 'hd-desktop', 2560: 'qhd-desktop', 3840: 'uhd-desktop' })
 
 Vue.http.interceptors.push((request, next) => {
     request.headers['X-CSRF-TOKEN'] = Laravel.csrfToken;

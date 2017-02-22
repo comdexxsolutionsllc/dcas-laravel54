@@ -19,6 +19,13 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
+        'stripe_id' => null,
+        'card_brand' => null,
+        'card_last_four' => null,
+        'trial_ends_at' => null,
+        'last_logged_in_at' => null,
         'remember_token' => str_random(10),
+        'created_at' => $faker->unixTime,
+        'updated_at' => null
     ];
 });

@@ -88,7 +88,7 @@
     </div>
 
     <!-- Scripts -->
-    {{--<script src="{{ mix('/js/app.js') }}"></script>--}}
+    <script src="{{ mix('/js/app.js') }}"></script>
     <!-- jQuery -->
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <!-- DataTables -->
@@ -100,7 +100,6 @@
 
     @if (Auth::check())
     <!-- Login timer for logout -->
-    <script>function timerIncrement(){idleTime++,idleTime>14&&axios.post("https://www.sarahrenner.work/logout").then(function(){window.location.replace(document.location.protocol+"//"+document.location.hostname+"/login")})}var idleTime=0;$(document).ready(function(){setInterval(timerIncrement,6e4);$(this).mousemove(function(){console.log("Event mousemove"),idleTime=0}),$(this).keypress(function(){console.log("Event keypress"),idleTime=0})});</script>
     <script>
         $( '.js-click-post' ).click(function(e) {
             e.preventDefault; // Prevent the default behavior of the  element.
