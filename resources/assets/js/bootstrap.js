@@ -60,3 +60,19 @@ window.Echo = new Echo({
     broadcaster: 'pusher',
     key: '891846d40fb294f5555e'
 });
+
+window.Echo.private('chat-room.1')
+    .listen('ChatMessageWasReceived', (e) => {
+        console.log(e.user, e.chatMessage);
+    });
+
+window.Echo.join('chat-room-presence.1').here(function (members) {
+    // runs when you join
+    console.table(members);
+}).joining(function (joiningMember, members) {
+    // runs when another member joins
+    console.table(joiningMember);
+}).leaving(function (leavingMember, members) {
+    // runs when another member leaves
+    console.table(leavingMember);
+});

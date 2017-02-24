@@ -11,5 +11,8 @@
         "psr-4": {
             "Modules\\Chat\\": ""
         }
+    },
+    "require": {
+        "pusher/pusher-php-server": "~2.0"
     }
 }
