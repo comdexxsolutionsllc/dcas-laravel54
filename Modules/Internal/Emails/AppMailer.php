@@ -13,19 +13,19 @@ class AppMailer extends Mailable {
 
     use Queueable, SerializesModels;
 
-    protected $mailer;
+    public $mailer;
 
-    protected $fromAddress = 'support@supportticket.dev';
+    public $fromAddress = 'support@supportticket.dev';
 
-    protected $fromName = 'Support Ticket';
+    public $fromName = 'Support Ticket';
 
-    protected $to;
+    public $to;
 
-    protected $subject;
+    public $subject;
 
-    protected $view;
+    public $view;
 
-    protected $data = [];
+    public $data = [];
 
 
     /**
@@ -47,7 +47,7 @@ class AppMailer extends Mailable {
     {
         $this->to = $user->email;
         $this->subject = "[Ticket ID: $ticket->ticket_id] $ticket->title";
-        $this->view = 'emails.ticket_info';
+        $this->view = 'internal::emails.ticket_info';
         $this->data = compact('user', 'ticket');
 
         return $this->deliver();
@@ -64,7 +64,7 @@ class AppMailer extends Mailable {
     {
         $this->to = $ticketOwner->email;
         $this->subject = "RE: $ticket->title (Ticket ID: $ticket->ticket_id)";
-        $this->view = 'emails.ticket_comments';
+        $this->view = 'internal::emails.ticket_comments';
         $this->data = compact('ticketOwner', 'user', 'ticket', 'comment');
 
         return $this->deliver();
@@ -79,7 +79,7 @@ class AppMailer extends Mailable {
     {
         $this->to = $ticketOwner->email;
         $this->subject = "RE: $ticket->title (Ticket ID: $ticket->ticket_id)";
-        $this->view = 'emails.ticket_status';
+        $this->view = 'internal::emails.ticket_status';
         $this->data = compact('ticketOwner', 'ticket');
 
         return $this->deliver();
