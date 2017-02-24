@@ -10,6 +10,7 @@
 /_composer_pkgs.ignore
 /_ide_helper.php
 /.env*
+/.phpstorm.meta.php
 /admin-test.token
 /git_tag
 /Homestead.json

@@ -7,7 +7,7 @@
     "require": {
         "php": ">=5.6.4",
         "cmgmyr/messenger": "2.13.*",
-        "doctrine/dbal": "~2.3",
+        "doctrine/dbal": "^2.5",
         "dompdf/dompdf": "v0.7.0",
         "gadyb/laravel-model-view-generator": "^1.0",
         "geoip/geoip": "^1.17",
@@ -79,6 +79,8 @@
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan ide-helper:generate",
+            "php artisan ide-helper:meta",
             "php artisan optimize"
         ]
     },

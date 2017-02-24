@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
 
+    <!-- TODO: Remove this -->
+    <style>
+        .row:not(:first-child) { padding-top: 25px; }
+    </style>
+
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([

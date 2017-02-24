@@ -135,4 +135,16 @@ class User extends Authenticatable {
     {
         return \Auth::user()->username;
     }
+
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class);
+    }
 }

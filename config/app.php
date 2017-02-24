@@ -184,6 +184,7 @@ return [
         /**
          * Vendor Service Providers...
          */
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         Nwidart\Modules\LaravelModulesServiceProvider::class,
         Busatlic\ScheduleMonitor\ScheduleMonitorServiceProvider::class,
