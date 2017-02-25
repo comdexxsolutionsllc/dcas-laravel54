@@ -1,4 +1,4 @@
-const { mix } = require('laravel-mix');
+const {mix} = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,7 +11,9 @@ const { mix } = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
+
+mix.copy('Modules/Chat/Assets/js/components/*.vue', 'resources/assets/js/components/')
+    .js('resources/assets/js/app.js', 'public/js')
     .sourceMaps()
     .sass('resources/assets/sass/app.scss', 'public/css')
     .version(['css/app.css', 'js/app.js']);

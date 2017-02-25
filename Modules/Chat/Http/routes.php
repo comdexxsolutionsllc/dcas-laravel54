@@ -1,6 +1,12 @@
 <?php
 
-Route::group(['middleware' => 'web', 'prefix' => 'chat', 'namespace' => 'Modules\Chat\Http\Controllers'], function()
+Route::group([
+    'domain'     => 'chat.sarahrenner.work',
+    'middleware' => 'web',
+    'namespace'  => 'Modules\Chat\Http\Controllers'
+], function ()
 {
     Route::get('/', 'ChatController@index');
+    Route::get('messages', 'ChatController@fetchMessages');
+    Route::post('messages', 'ChatController@sendMessage');
 });

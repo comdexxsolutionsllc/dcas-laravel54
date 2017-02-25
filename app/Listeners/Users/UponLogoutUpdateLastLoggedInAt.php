@@ -29,7 +29,10 @@ class UponLogoutUpdateLastLoggedInAt {
      */
     public function handle(Logout $event)
     {
-        $event->user->last_logged_in_at = Carbon::now();
-        $event->user->save();
+        if ($event->user)
+        {
+            $event->user->last_logged_in_at = Carbon::now();
+            $event->user->save();
+        }
     }
 }

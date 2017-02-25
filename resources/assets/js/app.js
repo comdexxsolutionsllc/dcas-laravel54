@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -35,6 +34,41 @@ Vue.component(
     require('./components/OnlineUsers.vue')
 );
 
+Vue.component(
+    'chat-messages',
+    require('./components/ChatMessages.vue')
+);
+
+Vue.component('chat-form',
+    require('./components/ChatForm.vue')
+);
+
+
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+
+    data: {
+        messages: []
+    },
+
+    created() {
+        this.fetchMessages();
+    },
+
+    methods: {
+        fetchMessages() {
+            window.axios.get('/messages').then(response => {
+                this.messages = response.data;
+            });
+        },
+
+        addMessage(message) {
+            this.messages.push(message);
+
+            window.axios.post('/messages', message).then(response => {
+                // console.log(response.data);
+            });
+        }
+    }
 });
+

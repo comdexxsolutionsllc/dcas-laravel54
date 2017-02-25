@@ -5,68 +5,57 @@ namespace Modules\Chat\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
+use Modules\Chat\Entities\ChatMessage;
+use Modules\Chat\Events\MessageSent;
 
-class ChatController extends Controller
-{
+class ChatController extends Controller {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     /**
-     * Display a listing of the resource.
-     * @return Response
+     * Show chats
+     *
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('chat::index');
+        return view('chat::chat');
     }
 
+
     /**
-     * Show the form for creating a new resource.
-     * @return Response
+     * Fetch all messages
+     *
+     * @return Message
      */
-    public function create()
+    public function fetchMessages()
     {
-        return view('chat::create');
+        return ChatMessage::with('user')->get();
     }
 
+
     /**
-     * Store a newly created resource in storage.
+     * Persist message to database
+     *
      * @param  Request $request
+     *
      * @return Response
      */
-    public function store(Request $request)
+    public function sendMessage(Request $request)
     {
-    }
+        $user = Auth::user();
 
-    /**
-     * Show the specified resource.
-     * @return Response
-     */
-    public function show()
-    {
-        return view('chat::show');
-    }
+        $message = $user->messages()->create([
+            'message' => $request->input('message')
+        ]);
 
-    /**
-     * Show the form for editing the specified resource.
-     * @return Response
-     */
-    public function edit()
-    {
-        return view('chat::edit');
-    }
+        broadcast(new MessageSent($user, $message))->toOthers();
 
-    /**
-     * Update the specified resource in storage.
-     * @param  Request $request
-     * @return Response
-     */
-    public function update(Request $request)
-    {
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     * @return Response
-     */
-    public function destroy()
-    {
+        return [ 'status' => 'Message Sent!' ];
     }
 }

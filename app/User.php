@@ -147,4 +147,14 @@ class User extends Authenticatable {
     {
         return $this->hasMany(Ticket::class);
     }
+
+    /**
+     * A user can have many messages
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function messages()
+    {
+        return $this->hasMany('\Modules\Chat\Entities\ChatMessage');
+    }
 }

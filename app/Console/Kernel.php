@@ -15,9 +15,7 @@ class Kernel extends ConsoleKernel
      *
      * @var array
      */
-    protected $commands = [
-        \Modules\Chat\Console\SendChatMessage::class,
-    ];
+    protected $commands = [];
 
     /**
      * Define the application's command schedule.
