@@ -196,6 +196,8 @@ return [
         Kim\Activity\ActivityServiceProvider::class,
         Lavary\Menu\ServiceProvider::class,
         GBarak\ViewCrudGenerator\ViewCrudServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Rinvex\Repository\Providers\RepositoryServiceProvider::class,
 
 
     ],
@@ -257,7 +259,8 @@ return [
         'Html'         => Collective\Html\HtmlFacade::class,
         'Entrust'      => Zizaco\Entrust\EntrustFacade::class,
         'Activity'     => Kim\Activity\ActivityFacade::class,
-        'Menu'         => Lavary\Menu\Facade::class
+        'Menu'         => Lavary\Menu\Facade::class,
+        'Debugbar'     => Barryvdh\Debugbar\Facade::class,
 
     ],
 

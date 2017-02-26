@@ -6,6 +6,15 @@
 
 require('./bootstrap');
 
+Vue.filter(
+    'formatDate',
+    function (value) {
+        if (value) {
+            return window.moment(String(value)).format('DD/MM/YYYY h:mm:ss A');
+        }
+    });
+
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

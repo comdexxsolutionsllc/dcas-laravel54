@@ -20,10 +20,11 @@ require_once('web_cashier.php');
 //    return view('welcome');
 //});
 
+Route::get('/sitemap.xml', 'PagesController@sitemap');
 
 // Datatable routes...
-Route::get('datatables',['uses'=>'HomeController@getIndex', 'as' => 'datatables']);
-Route::post('datatables/data',['uses'=>'HomeController@anyData', 'as' => 'datatables.data']);
+Route::get('datatables', [ 'uses' => 'HomeController@getIndex', 'as' => 'datatables' ]);
+Route::post('datatables/data', [ 'uses' => 'HomeController@anyData', 'as' => 'datatables.data' ]);
 
 // Role routes...
 Route::resource('role', 'RoleController');
