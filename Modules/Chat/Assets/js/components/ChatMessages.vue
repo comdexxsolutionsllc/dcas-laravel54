@@ -6,6 +6,7 @@
                     <strong class="primary-font">
                         {{ message.user.name }}
                     </strong>
+                    <em>({{ message.created_at | formatDate }})</em>
                 </div>
                 <p>
                     {{ message.message }}

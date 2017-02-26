@@ -47,6 +47,7 @@
     "pusher-js": "^4.0.0",
     "underscore": "^1.8.3",
     "vue-meta": "^0.5.3",
+    "vue-moment": "^2.0.2",
     "vue-resource": "^0.9.3",
     "vue-viewports": "^2.2.0",
     "vuex": "^2.1.2"

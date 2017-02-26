@@ -15,6 +15,6 @@ class ChatMessage extends Model {
      */
     public function user()
     {
-        return $this->belongsTo('\App\User')->select(array('id', 'name', 'email', 'is_admin'));;
+        return $this->belongsTo('\App\User')->select([ 'id', 'name', 'email', 'is_admin' ]);;
     }
 }

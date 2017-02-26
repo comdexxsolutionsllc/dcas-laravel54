@@ -31,9 +31,8 @@ Vue.use(Vuex)
 Vue.http.interceptors.push((request, next) => {
     request.headers['X-CSRF-TOKEN'] = Laravel.csrfToken;
 
-next();
+    next();
 });
-
 
 
 /**
@@ -49,6 +48,14 @@ window.axios.defaults.headers.common = {
 };
 
 window.moment = moment;
+
+Vue.filter(
+    'formatDate',
+    function (value) {
+        if (value) {
+            return window.moment(String(value)).format('h:mm:ss a');
+        }
+    });
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

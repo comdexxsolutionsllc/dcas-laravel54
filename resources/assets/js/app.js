@@ -55,6 +55,15 @@ const app = new Vue({
         this.fetchMessages();
     },
 
+    watch: {
+        messages: {
+            handler: function (val, oldVal) {
+                this.fetchMessages();
+            },
+            deep: true
+        }
+    },
+
     methods: {
         fetchMessages() {
             window.axios.get('/messages').then(response => {
@@ -71,4 +80,3 @@ const app = new Vue({
         }
     }
 });
-
