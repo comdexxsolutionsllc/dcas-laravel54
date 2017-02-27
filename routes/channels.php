@@ -18,5 +18,10 @@ Broadcast::channel('App.User.{id}', function ($user, $id)
 
 Broadcast::channel('chat', function ($user)
 {
-    return Auth::check();
+    return ($user->is_admin == 1) ? [ 'id' => $user->id, 'name' => $user->name ] : false;
 });
+
+//Broadcast::channel('chat', function ($user)
+//{
+//    return Auth::check();
+//});

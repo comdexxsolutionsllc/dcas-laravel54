@@ -50,12 +50,18 @@ class ChatController extends Controller {
     {
         $user = Auth::user();
 
-        $message = $user->messages()->create([
-            'message' => $request->input('message')
-        ]);
+        if ($user->is_admin !== 1)
+        {
+            Response::make('Forbidden', 403);
+        } else
+        {
+            $message = $user->messages()->create([
+                'message' => $request->input('message')
+            ]);
 
-        broadcast(new MessageSent($user, $message))->toOthers();
+            broadcast(new MessageSent($user, $message))->toOthers();
 
-        return [ 'status' => 'Message Sent!' ];
+            return [ 'status' => 'Message Sent!' ];
+        }
     }
 }

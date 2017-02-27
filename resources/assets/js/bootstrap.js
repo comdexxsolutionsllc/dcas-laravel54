@@ -61,7 +61,16 @@ window.Echo = new Echo({
     encrypted: true
 });
 
-window.Echo.private('chat')
+window.Echo.join('chat')
+    .here((users) => {
+        //
+    })
+    .joining((user) => {
+        console.log(user.name);
+    })
+    .leaving((user) => {
+        console.log(user.name);
+    })
     .listen('MessageSent', (e) => {
         this.messages.push({
             message: e.message.message,

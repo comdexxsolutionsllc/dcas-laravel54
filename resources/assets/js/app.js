@@ -52,6 +52,10 @@ Vue.component('chat-form',
     require('./components/ChatForm.vue')
 );
 
+Vue.component('user-list',
+    require('./components/UserList.vue')
+);
+
 
 const app = new Vue({
     el: '#app',

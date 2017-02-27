@@ -17,6 +17,7 @@
                                 :user="{{ Auth::user() }}"
                         ></chat-form>
                     </div>
+                    <user-list></user-list>
                 </div>
             </div>
         </div>
