@@ -30,7 +30,14 @@
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
-                @include('flash::message')
+                {{--@include('flash::message')--}}
+                @if (session()->has('flash_notification.message'))
+                    <div class="alert alert-{{ session('flash_notification.level') }}">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+                        {!! session('flash_notification.message') !!}
+                    </div>
+                @endif
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->

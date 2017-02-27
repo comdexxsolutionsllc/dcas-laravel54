@@ -24,7 +24,17 @@ class ChatController extends Controller {
      */
     public function index()
     {
-        return view('chat::chat');
+        $user = Auth::user();
+
+        if ($user->is_admin !== 1)
+        {
+            flash('You are not allowed to join the PresenceChannel called "Chat" due to insufficient privileges!');
+
+            return redirect('/home');
+        } else
+        {
+            return view('chat::chat');
+        }
     }
 
 
@@ -52,7 +62,7 @@ class ChatController extends Controller {
 
         if ($user->is_admin !== 1)
         {
-            Response::make('Forbidden', 403);
+            return new Response('Forbidden', 403);
         } else
         {
             $message = $user->messages()->create([
