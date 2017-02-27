@@ -31,5 +31,5 @@
                 this.newMessage = ''
             }
         }
-    }
+    };
 </script>

@@ -1,9 +1,11 @@
 import Echo from "laravel-echo"
-import Meta from 'vue-meta'
 import moment from 'moment'
-import Vuex from 'vuex'
-import VueViewports from 'vue-viewports'
+import VueStash from 'vue-stash';
 
+/**
+ import Meta from 'vue-meta'
+ import VueViewports from 'vue-viewports'
+ */
 
 // window._ = require('lodash');
 
@@ -25,7 +27,6 @@ import VueViewports from 'vue-viewports'
 window.Vue = require('vue');
 require('vue-resource');
 
-Vue.use(Vuex)
 // Vue.use(VueViewports, { 420: 'mobile', 768: 'tablet', 1024: 'desktop', 1920: 'hd-desktop', 2560: 'qhd-desktop', 3840: 'uhd-desktop' })
 
 Vue.http.interceptors.push((request, next) => {
@@ -34,6 +35,7 @@ Vue.http.interceptors.push((request, next) => {
     next();
 });
 
+Vue.use(VueStash)
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -58,22 +60,5 @@ window.moment = moment;
 window.Echo = new Echo({
     broadcaster: 'pusher',
     key: '891846d40fb294f5555e',
-    encrypted: true
+    encrypted: false
 });
-
-window.Echo.join('chat')
-    .here((users) => {
-        //
-    })
-    .joining((user) => {
-        console.log(user.name);
-    })
-    .leaving((user) => {
-        console.log(user.name);
-    })
-    .listen('MessageSent', (e) => {
-        this.messages.push({
-            message: e.message.message,
-            user: e.user
-        });
-    });

@@ -5,6 +5,8 @@
  */
 
 require('./bootstrap');
+import Vue from 'vue'
+import store from './stores/ChatStore'
 
 Vue.filter(
     'formatDate',
@@ -48,23 +50,26 @@ Vue.component(
     require('./components/ChatMessages.vue')
 );
 
-Vue.component('chat-form',
+Vue.component(
+    'chat-form',
     require('./components/ChatForm.vue')
 );
 
-Vue.component('user-list',
+Vue.component(
+    'user-list',
     require('./components/UserList.vue')
 );
 
-
 const app = new Vue({
-    el: '#app',
-
     data: {
-        messages: []
+        messages: [],
+        users: []
     },
 
+    el: '#app',
+
     created() {
+        this.fetchUsers();
         this.fetchMessages();
     },
 
@@ -90,6 +95,36 @@ const app = new Vue({
             window.axios.post('/chat/messages', message).then(response => {
                 // console.log(response.data);
             });
+        },
+
+        addUser(user) {
+            this.users.push(user);
+        },
+
+        deleteUser() {
+            this.users.pop();
+        },
+
+        fetchUsers() {
+            this.users;
         }
     }
 });
+
+window.Echo.join('chat')
+    .here((e) => {
+        app.addUser(e);
+    })
+    .joining((e) => {
+        console.log(e.name + ' joined');
+    })
+    .leaving((e) => {
+        app.deleteUser();
+        console.log(e.name + ' left');
+    })
+    .listen('MessageSent', (e) => {
+        this.messages.push({
+            message: e.message.message,
+            user: e.user
+        });
+    });

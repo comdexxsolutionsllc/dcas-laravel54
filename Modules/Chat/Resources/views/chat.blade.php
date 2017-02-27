@@ -1,7 +1,6 @@
 @extends('chat::layouts.master')
 
 @section('content')
-
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -17,7 +16,7 @@
                                 :user="{{ Auth::user() }}"
                         ></chat-form>
                     </div>
-                    <user-list></user-list>
+                    <user-list :users="users"></user-list>
                 </div>
             </div>
         </div>

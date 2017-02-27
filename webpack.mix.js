@@ -13,6 +13,7 @@ const {mix} = require('laravel-mix');
 
 
 mix.copy('Modules/Chat/Assets/js/components/*.vue', 'resources/assets/js/components/')
+    .copy('Modules/Chat/Assets/js/*.js', 'resources/assets/js/')
     .copy('../.bashrc', 'utility_files/')
     .js('resources/assets/js/app.js', 'public/js')
     .sourceMaps()
