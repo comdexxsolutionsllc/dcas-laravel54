@@ -1,7 +1,7 @@
 <?php
 
 Route::group([
-    'domain'     => 'internal.sarahrenner.work',
+    'prefix' => 'internal',
     'middleware' => 'web',
     'namespace'  => 'Modules\Internal\Http\Controllers'
 ], function ()

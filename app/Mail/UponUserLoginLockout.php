@@ -2,12 +2,10 @@
 
 namespace App\Mail;
 
+use Carbon\Carbon;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Http\Request;
-use Carbon\Carbon;
 
 class UponUserLoginLockout extends Mailable {
 
@@ -32,6 +30,9 @@ class UponUserLoginLockout extends Mailable {
      */
     public function build()
     {
-        return $this->markdown('emails.UponUserLoginLockout')->with([ 'timestamp' => Carbon::now(), 'user' => request()->email ]);
+        return $this->markdown('emails.UponUserLoginLockout')->with([
+            'timestamp' => Carbon::now(),
+            'user'      => request()->email
+        ]);
     }
 }

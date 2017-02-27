@@ -21,7 +21,6 @@ trait CreatesApplication {
 
         $app->make(Kernel::class)->bootstrap();
 
-
         TestResponse::macro('assertJsonContains', function (array $data, $negate = false)
         {
             $method = $negate ? 'assertFalse' : 'assertTrue';

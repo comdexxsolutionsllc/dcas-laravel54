@@ -1,10 +1,13 @@
 <?php
 namespace App\Exceptions;
+
 use Symfony\Component\HttpFoundation\Response as IlluminateResponse;
+
 /**
  * Class DCASDomainErrorHelper
  */
 class DCASDomainErrorHelper {
+
     /**
      * Flag Unauthorized Exception
      *

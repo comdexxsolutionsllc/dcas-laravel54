@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 return [
 
@@ -40,15 +40,15 @@ return [
     'connections' => [
 
         'main' => [
-            'prime' => '1764122903',
+            'prime'   => '1764122903',
             'inverse' => '1453647527',
-            'random' => '778141698',
+            'random'  => '778141698',
         ],
 
         'alternative' => [
-            'prime' => '1633333483',
+            'prime'   => '1633333483',
             'inverse' => '864712643',
-            'random' => '619519167',
+            'random'  => '619519167',
         ],
 
     ],

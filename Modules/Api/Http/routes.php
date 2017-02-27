@@ -1,8 +1,7 @@
 <?php
 Route::group([
-    'domain'     => 'api.sarahrenner.work',
     'middleware' => 'web',
-    'prefix'     => 'v1',
+    'prefix'     => 'api/v1',
     'namespace'  => 'Modules\Api\Http\Controllers'
 ], function ()
 {

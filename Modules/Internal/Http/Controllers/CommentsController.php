@@ -2,18 +2,17 @@
 
 namespace Modules\Internal\Http\Controllers;
 
-use App\User;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Modules\Internal\Emails\AppMailer;
 use Modules\Internal\Entities\Comment;
-use Modules\Internal\Entities\Ticket;
 
 class CommentsController extends Controller {
+
     use ValidatesRequests;
+
 
     public function postComment(Request $request, AppMailer $mailer)
     {

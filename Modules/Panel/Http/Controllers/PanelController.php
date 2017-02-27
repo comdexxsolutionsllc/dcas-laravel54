@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 
-class PanelController extends Controller
-{
+class PanelController extends Controller {
+
     /**
      * Display a listing of the resource.
      * @return Response
@@ -16,6 +16,7 @@ class PanelController extends Controller
     {
         return view('panel::index');
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -26,14 +27,18 @@ class PanelController extends Controller
         return view('panel::create');
     }
 
+
     /**
      * Store a newly created resource in storage.
+     *
      * @param  Request $request
+     *
      * @return Response
      */
     public function store(Request $request)
     {
     }
+
 
     /**
      * Show the specified resource.
@@ -44,6 +49,7 @@ class PanelController extends Controller
         return view('panel::show');
     }
 
+
     /**
      * Show the form for editing the specified resource.
      * @return Response
@@ -53,14 +59,18 @@ class PanelController extends Controller
         return view('panel::edit');
     }
 
+
     /**
      * Update the specified resource in storage.
+     *
      * @param  Request $request
+     *
      * @return Response
      */
     public function update(Request $request)
     {
     }
+
 
     /**
      * Remove the specified resource from storage.

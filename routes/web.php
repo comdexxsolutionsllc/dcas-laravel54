@@ -15,10 +15,10 @@ require_once('web_authentication.php');
 require_once('web_impersonate.php');
 require_once('web_cashier.php');
 
-//Route::get('/', function ()
-//{
-//    return view('welcome');
-//});
+Route::get('/', function ()
+{
+    return view('welcome');
+});
 
 Route::get('/sitemap.xml', 'PagesController@sitemap');
 

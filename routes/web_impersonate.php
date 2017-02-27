@@ -4,7 +4,7 @@ Route::get('/users/{id}/impersonate', 'UserController@impersonate');
 Route::get('/users/stop', 'UserController@stopImpersonate');
 
 // Other pages...
-Route::group(['middleware' => 'impersonate'], function()
+Route::group([ 'middleware' => 'impersonate' ], function ()
 {
-Route::get('/home', 'HomeController@index');
+    Route::get('/home', 'HomeController@index');
 });

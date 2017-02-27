@@ -2,13 +2,13 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
+use Carbon\Carbon;
+use Cmgmyr\Messenger\Traits\Messagable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 use Laravel\Cashier\Billable;
 use Laravel\Passport\HasApiTokens;
 use Session;
-use Carbon\Carbon;
-use Cmgmyr\Messenger\Traits\Messagable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable {
@@ -20,7 +20,13 @@ class User extends Authenticatable {
      *
      * @var array
      */
-    protected $dates = [ 'last_logged_in_at', 'trial_ends_at', 'ends_at', 'created_at', 'updated_at' ];
+    protected $dates = [
+        'created_at',
+        'ends_at',
+        'last_logged_in_at',
+        'trial_ends_at',
+        'updated_at'
+    ];
 
     /**
      * The attributes that are mass assignable.
@@ -28,10 +34,10 @@ class User extends Authenticatable {
      * @var array
      */
     protected $fillable = [
-        'name',
         'email',
-        'password',
         'last_logged_in_at',
+        'name',
+        'password'
     ];
 
     /**
@@ -57,22 +63,6 @@ class User extends Authenticatable {
 
 
     /**
-     * Get the user's updated at date.
-     *
-     * @param  string $value
-     *
-     * @return string
-     */
-    public function getUpdatedAtAttribute($value)
-    {
-        if ( ! is_null($value))
-        {
-            return Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans();
-        }
-    }
-
-
-    /**
      * Get the user's last logged-in date.
      *
      * @param  string $value
@@ -81,15 +71,27 @@ class User extends Authenticatable {
      */
     public function getLastLoggedInAtAttribute($value)
     {
-        if ( ! is_null($value))
-        {
-            return Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans();
-        }
+        return $value ?? Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans() ?? 'null';
     }
 
 
     /**
-     * @return bool
+     * Get the user's updated at date.
+     *
+     * @param  string $value
+     *
+     * @return string
+     */
+    public function getUpdatedAtAttribute($value)
+    {
+        return $value ?? Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans() ?? '';
+    }
+
+
+    /**
+     * Is the user an administrator user.
+     *
+     * @return bool user is administrator
      */
     public function isAdministrator()
     {
@@ -98,27 +100,7 @@ class User extends Authenticatable {
 
 
     /**
-     * Set Impersonating a User
-     *
-     * @param $id
-     */
-    public function setImpersonating($id)
-    {
-        Session::put('impersonate', $id);
-    }
-
-
-    /**
-     * Stop Impersonating a User
-     */
-    public function stopImpersonating()
-    {
-        Session::forget('impersonate');
-    }
-
-
-    /**
-     * Check if Impersonating
+     * Check if impersonating a user.
      *
      * @return mixed
      */
@@ -129,32 +111,65 @@ class User extends Authenticatable {
 
 
     /**
-     * @return mixed
+     * Impersonating a user.
+     *
+     * @param $id User ID
      */
-    public function username()
+    public function setImpersonating($id)
     {
-        return \Auth::user()->username;
+        Session::put('impersonate', $id);
     }
 
-
-    public function comments()
-    {
-        return $this->hasMany(Comment::class);
-    }
-
-
-    public function tickets()
-    {
-        return $this->hasMany(Ticket::class);
-    }
 
     /**
-     * A user can have many messages
+     * Stop Impersonating a user.
+     */
+    public function stopImpersonating()
+    {
+        Session::forget('impersonate');
+    }
+
+
+    /**
+     * A user can have many comments.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function comments()
+    {
+        return $this->hasMany('\Modules\Internal\Entities\Comment');
+    }
+
+
+    /**
+     * A user can have many messages.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function messages()
     {
         return $this->hasMany('\Modules\Chat\Entities\ChatMessage');
+    }
+
+
+    /**
+     * A user can have many tickets.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function tickets()
+    {
+        return $this->hasMany('\Modules\Internal\Entities\Ticket');
+    }
+
+
+    /**
+     * Username from user object.
+     *
+     * @return string username
+     */
+    public function username()
+    {
+        return \Auth::user()->username;
     }
 }

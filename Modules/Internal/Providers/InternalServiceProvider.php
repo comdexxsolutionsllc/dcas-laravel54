@@ -4,14 +4,15 @@ namespace Modules\Internal\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class InternalServiceProvider extends ServiceProvider
-{
+class InternalServiceProvider extends ServiceProvider {
+
     /**
      * Indicates if loading of the provider is deferred.
      *
      * @var bool
      */
     protected $defer = false;
+
 
     /**
      * Boot the application events.
@@ -25,6 +26,7 @@ class InternalServiceProvider extends ServiceProvider
         $this->registerViews();
     }
 
+
     /**
      * Register the service provider.
      *
@@ -34,6 +36,7 @@ class InternalServiceProvider extends ServiceProvider
     {
         //
     }
+
 
     /**
      * Register config.
@@ -45,10 +48,9 @@ class InternalServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../Config/config.php' => config_path('internal.php'),
         ], 'config');
-        $this->mergeConfigFrom(
-            __DIR__.'/../Config/config.php', 'internal'
-        );
+        $this->mergeConfigFrom(__DIR__.'/../Config/config.php', 'internal');
     }
+
 
     /**
      * Register views.
@@ -65,10 +67,12 @@ class InternalServiceProvider extends ServiceProvider
             $sourcePath => $viewPath
         ]);
 
-        $this->loadViewsFrom(array_merge(array_map(function ($path) {
-            return $path . '/modules/internal';
-        }, \Config::get('view.paths')), [$sourcePath]), 'internal');
+        $this->loadViewsFrom(array_merge(array_map(function ($path)
+        {
+            return $path.'/modules/internal';
+        }, \Config::get('view.paths')), [ $sourcePath ]), 'internal');
     }
+
 
     /**
      * Register translations.
@@ -79,12 +83,15 @@ class InternalServiceProvider extends ServiceProvider
     {
         $langPath = base_path('resources/lang/modules/internal');
 
-        if (is_dir($langPath)) {
+        if (is_dir($langPath))
+        {
             $this->loadTranslationsFrom($langPath, 'internal');
-        } else {
-            $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', 'internal');
+        } else
+        {
+            $this->loadTranslationsFrom(__DIR__.'/../Resources/lang', 'internal');
         }
     }
+
 
     /**
      * Get the services provided by the provider.

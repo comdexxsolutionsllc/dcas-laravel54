@@ -2,12 +2,11 @@
 
 namespace Modules\Internal\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 
-class InternalController extends Controller
-{
+class InternalController extends Controller {
+
     /**
      * Display a listing of the resource.
      * @return Response

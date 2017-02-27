@@ -1,5 +1,7 @@
 <?php
 
+namespace DCASDomain\Contracts;
+
 interface RepositoryContract {
 
     public function find($id, $columns = [ '*' ], $with = []);

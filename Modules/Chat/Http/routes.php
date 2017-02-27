@@ -1,7 +1,7 @@
 <?php
 
 Route::group([
-    'domain'     => 'chat.sarahrenner.work',
+    'prefix' => 'chat',
     'middleware' => 'web',
     'namespace'  => 'Modules\Chat\Http\Controllers'
 ], function ()
