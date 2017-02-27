@@ -75,7 +75,7 @@ const app = new Vue({
 
     methods: {
         fetchMessages() {
-            window.axios.get('/messages').then(response => {
+            window.axios.get('/chat/messages').then(response => {
                 this.messages = response.data;
             });
         },
@@ -83,7 +83,7 @@ const app = new Vue({
         addMessage(message) {
             this.messages.push(message);
 
-            window.axios.post('/messages', message).then(response => {
+            window.axios.post('/chat/messages', message).then(response => {
                 // console.log(response.data);
             });
         }
