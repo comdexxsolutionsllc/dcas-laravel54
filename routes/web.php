@@ -18,7 +18,7 @@ require_once('web_cashier.php');
 Route::get('/', function ()
 {
     return view('welcome');
-});
+})->middleware('restrict.ip.main');
 
 Route::get('/sitemap.xml', 'PagesController@sitemap');
 

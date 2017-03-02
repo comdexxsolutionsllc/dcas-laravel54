@@ -18,4 +18,7 @@ mix.copy('Modules/Chat/Assets/js/components/*.vue', 'resources/assets/js/compone
     .js('resources/assets/js/app.js', 'public/js')
     .sourceMaps()
     .sass('resources/assets/sass/app.scss', 'public/css')
-    .version(['css/app.css', 'js/app.js']);
+    .version(['css/app.css', 'js/app.js'])
+    .combine(['Modules/Chat/Assets/css/*.css'], 'public/css/chat-vendor.css')
+    .version(['css/chat-vendor.css']);
+

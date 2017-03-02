@@ -10,23 +10,16 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 use Modules\Chat\Entities\ChatMessage;
 
-class MessageSent implements ShouldBroadcast {
+class UserAdded implements ShouldBroadcast {
 
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     /**
-     * User that sent the message
+     * User that signed-in.
      *
      * @var User
      */
     public $user;
-
-    /**
-     * Message details
-     *
-     * @var Message
-     */
-    public $message;
 
 
     /**
@@ -37,7 +30,6 @@ class MessageSent implements ShouldBroadcast {
     public function __construct(User $user, ChatMessage $message)
     {
         $this->user = $user;
-        $this->message = $message;
     }
 
 

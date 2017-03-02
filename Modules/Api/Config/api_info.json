@@ -1,0 +1,17 @@
+{
+  "current_version": "alpha",
+  "versions": [
+    "alpha",
+    "v1"
+  ],
+  "path_map": {
+    "alpha": "api/alpha",
+    "v1": "api/v1"
+  },
+  "developers": {
+    "Sarah Renner": {
+      "email": "sarah@sarahrenner.work",
+      "website": "linkedin.sarahrenner.work"
+    }
+  }
+}

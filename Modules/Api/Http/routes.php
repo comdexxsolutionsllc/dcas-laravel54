@@ -7,6 +7,11 @@ Route::group([
 {
     Route::get('/', 'ApiController@index')->name('api.v1.home');
 
+    Route::get('/test', function ()
+    {
+        return Modules\Api\Exceptions\UnsupportedMediaTypeException::send();
+    });
+
 //|                      | POST      | photos                                  | photos.store     | Modules\Api\Http\Controllers\ApiController@store                           |                      |
 //|                      | GET|HEAD  | photos                                  | photos.index     | Modules\Api\Http\Controllers\ApiController@index                           |                      |
 //|                      | GET|HEAD  | photos/create                           | photos.create    | Modules\Api\Http\Controllers\ApiController@create                          |                      |

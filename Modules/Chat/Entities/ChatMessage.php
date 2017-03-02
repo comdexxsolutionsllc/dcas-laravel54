@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ChatMessage extends Model {
 
-    public $fillable = [ 'message' ];
+    protected $fillable = [ 'message' ];
 
     /**
      * A message belong to a user

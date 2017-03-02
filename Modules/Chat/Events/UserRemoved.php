@@ -8,25 +8,17 @@ use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Modules\Chat\Entities\ChatMessage;
 
 class MessageSent implements ShouldBroadcast {
 
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     /**
-     * User that sent the message
+     * User that signed out.
      *
      * @var User
      */
     public $user;
-
-    /**
-     * Message details
-     *
-     * @var Message
-     */
-    public $message;
 
 
     /**
@@ -34,10 +26,9 @@ class MessageSent implements ShouldBroadcast {
      *
      * @return void
      */
-    public function __construct(User $user, ChatMessage $message)
+    public function __construct(User $user)
     {
         $this->user = $user;
-        $this->message = $message;
     }
 
 

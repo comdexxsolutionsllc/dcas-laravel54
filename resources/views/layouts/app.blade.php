@@ -16,7 +16,9 @@
 
     <!-- TODO: Remove this -->
     <style>
-        .row:not(:first-child) { padding-top: 25px; }
+        .row:not(:first-child) {
+            padding-top: 25px;
+        }
     </style>
 
     <!-- Scripts -->
@@ -27,93 +29,96 @@
     </script>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                {{--@include('flash::message')--}}
-                @if (session()->has('flash_notification.message'))
-                    <div class="alert alert-{{ session('flash_notification.level') }}">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+<div id="app">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            {{--@include('flash::message')--}}
+            @if (session()->has('flash_notification.message'))
+                <div class="alert alert-{{ session('flash_notification.level') }}">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 
-                        {!! session('flash_notification.message') !!}
-                    </div>
-                @endif
-                <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+                    {!! session('flash_notification.message') !!}
                 </div>
+            @endif
+            <div class="navbar-header">
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
+                <!-- Collapsed Hamburger -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#app-navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                <!-- Branding Image -->
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <!-- Left Side Of Navbar -->
+                <ul class="nav navbar-nav">
+                    &nbsp;
+                </ul>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Authentication Links -->
+                    @if (Auth::guest())
+                        <li><a href="{{ url('/login') }}">Login</a></li>
+                        <li><a href="{{ url('/register') }}">Register</a></li>
+                    @else
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                @if(\Auth::user()->isImpersonating())
+                                    <li><a href="{{ url('/users/stop')  }}">Stop Impersonate</a></li>
+                                @endif
+
+                                <a href="{{ url('/logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    Logout
                                 </a>
 
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                    @if(\Auth::user()->isImpersonating())
-                                        <li><a href="{{ url('/users/stop')  }}">Stop Impersonate</a></li>
-                                    @endif
-
-                                        <a href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
-                </div>
+                                <form id="logout-form" action="{{ url('/logout') }}" method="POST"
+                                      style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                                </li>
+                            </ul>
+                        </li>
+                    @endif
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        @yield('content')
-    </div>
+    @yield('content')
+</div>
 
-    <!-- Scripts -->
-    <script src="{{ mix('/js/app.js') }}"></script>
-    <!-- jQuery -->
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <!-- DataTables -->
-    <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
-    <!-- Bootstrap JavaScript -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <!-- App scripts -->
-    @stack('scripts')
+<!-- Scripts -->
+<script src="{{ mix('/js/app.js') }}"></script>
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<!-- DataTables -->
+<script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!-- App scripts -->
+@stack('scripts')
 
-    @if (Auth::check())
+@if (Auth::check())
     <!-- Login timer for logout -->
     <script>
-        $( '.js-click-post' ).click(function(e) {
+        $('.js-click-post').click(function (e) {
             e.preventDefault; // Prevent the default behavior of the  element.
             var post = $(this).closest('.media-heading'); // Find the parent .post element
             var postId = post.attr('data-post-id'); // Get the post ID from our data attribute
@@ -137,6 +142,6 @@
             });
         }
     </script>
-    @endif
+@endif
 </body>
 </html>

@@ -1,9 +1,9 @@
 <template>
-    <ul class="user-list">
-        <li class="left clearfix" v-for="user in users[0]">
+    <ul class="user-list columns">
+        <li class="left clearfix column" v-for="user in users[0]">
             <div class="chat-body clearfix">
                 <div class="header">
-                    <strong class="primary-font">
+                    <strong class="primary-font" style="font-size: 12px">
                         {{ user.name }}
                     </strong>
                 </div>

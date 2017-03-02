@@ -16,7 +16,10 @@
                                 :user="{{ Auth::user() }}"
                         ></chat-form>
                     </div>
-                    <user-list :users="users"></user-list>
+                    <div class="panel-footer">
+                        <div class="panel-heading has-text-centered">Users</div>
+                        <user-list :users="users"></user-list>
+                    </div>
                 </div>
             </div>
         </div>

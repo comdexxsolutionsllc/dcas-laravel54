@@ -7,6 +7,7 @@
 require('./bootstrap');
 import Vue from 'vue'
 import store from './stores/ChatStore'
+import SweetAlert from 'sweetalert'
 
 Vue.filter(
     'formatDate',
@@ -86,6 +87,8 @@ const app = new Vue({
         fetchMessages() {
             window.axios.get('/chat/messages').then(response => {
                 this.messages = response.data;
+            }).catch(function (error) {
+                console.log(error);
             });
         },
 
@@ -93,20 +96,35 @@ const app = new Vue({
             this.messages.push(message);
 
             window.axios.post('/chat/messages', message).then(response => {
-                // console.log(response.data);
+            }).catch(function (error) {
+                console.log(error);
             });
         },
 
         addUser(user) {
             this.users.push(user);
+
+            window.axios.post('/chat/users', user).then(response => {
+            }).catch(function (error) {
+                console.log(error);
+            });
         },
 
         deleteUser() {
-            this.users.pop();
+            window.axios.delete('/chat/users', user).then(response => {
+            }).catch(function (error) {
+                console.log(error);
+            });
+
+            this.users.pop(user);
         },
 
         fetchUsers() {
-            this.users;
+            window.axios.get('/chat/users').then(response => {
+                this.users = response.data;
+            }).catch(function (error) {
+                console.log(error);
+            });
         }
     }
 });
@@ -116,15 +134,44 @@ window.Echo.join('chat')
         app.addUser(e);
     })
     .joining((e) => {
-        console.log(e.name + ' joined');
+        swal({
+            title: "Notice",
+            text: e.name + ' joined the chatroom.',
+            type: "info",
+            timer: 5000,
+            allowEscapeKey: true,
+            allowOutsideClick: true,
+            customClass: 'swal-custom'
+        });
     })
     .leaving((e) => {
         app.deleteUser();
-        console.log(e.name + ' left');
+
+        swal({
+            title: "Notice",
+            text: e.name + ' lefted the chatroom.',
+            type: "info",
+            type: "info",
+            timer: 5000,
+            allowEscapeKey: true,
+            allowOutsideClick: true,
+            customClass: 'swal-custom'
+        });
     })
     .listen('MessageSent', (e) => {
         this.messages.push({
             message: e.message.message,
             user: e.user
         });
+    })
+    .listen('UserAdded', (e) => {
+        this.users.push({
+            user: e.user
+        });
+    })
+    .listen('UserDeleted', (e) => {
+        e.name + ' user deleted.';
     });
+
+
+
