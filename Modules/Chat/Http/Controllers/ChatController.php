@@ -17,7 +17,7 @@ class ChatController extends Controller {
 
     public function __construct()
     {
-        //$this->middleware('auth');
+        $this->middleware('auth');
     }
 
 
@@ -143,5 +143,11 @@ class ChatController extends Controller {
             return [ 'status' => 'User Removed!' ];
         }
 
+    }
+
+
+    public function fetchAuth()
+    {
+        return \Auth::user();
     }
 }

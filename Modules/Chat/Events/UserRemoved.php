@@ -2,12 +2,12 @@
 
 namespace Modules\Chat\Events;
 
-use App\User;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use Modules\Chat\Entities\ChatUser;
 
 class MessageSent implements ShouldBroadcast {
 
@@ -26,7 +26,7 @@ class MessageSent implements ShouldBroadcast {
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct(ChatUser $user)
     {
         $this->user = $user;
     }

@@ -15,7 +15,8 @@ class VerifyCsrfToken extends BaseVerifier
         'stripe/*',
         'v1/*',
         'broadcasting/auth',
+        'chat/auth',
         'chat/messages',
-        'chat/users',
+        'chat/users'
     ];
 }

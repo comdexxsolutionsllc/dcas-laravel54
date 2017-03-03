@@ -12,4 +12,5 @@ Route::group([
     Route::get('users', 'ChatController@fetchUsers');
     Route::post('users', 'ChatController@setUsers');
     Route::delete('users', 'ChatController@deleteUsers');
+    Route::post('auth', 'ChatController@fetchAuth');
 });

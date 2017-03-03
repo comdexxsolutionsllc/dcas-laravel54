@@ -6,7 +6,6 @@
 
 require('./bootstrap');
 import Vue from 'vue'
-import store from './stores/ChatStore'
 import SweetAlert from 'sweetalert'
 
 Vue.filter(
@@ -23,8 +22,6 @@ Vue.filter(
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
-// Vue.component('example', require('./components/Example.vue'));
 
 Vue.component(
     'passport-clients',
@@ -47,18 +44,8 @@ Vue.component(
 );
 
 Vue.component(
-    'chat-messages',
-    require('./components/ChatMessages.vue')
-);
-
-Vue.component(
-    'chat-form',
-    require('./components/ChatForm.vue')
-);
-
-Vue.component(
-    'user-list',
-    require('./components/UserList.vue')
+    'chat-app',
+    require('./components/ChatApp.vue')
 );
 
 const app = new Vue({
@@ -69,38 +56,7 @@ const app = new Vue({
 
     el: '#app',
 
-    created() {
-        this.fetchUsers();
-        this.fetchMessages();
-    },
-
-    watch: {
-        messages: {
-            handler: function (val, oldVal) {
-                this.fetchMessages();
-            },
-            deep: true
-        }
-    },
-
     methods: {
-        fetchMessages() {
-            window.axios.get('/chat/messages').then(response => {
-                this.messages = response.data;
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-
-        addMessage(message) {
-            this.messages.push(message);
-
-            window.axios.post('/chat/messages', message).then(response => {
-            }).catch(function (error) {
-                console.log(error);
-            });
-        },
-
         addUser(user) {
             this.users.push(user);
 
@@ -117,14 +73,6 @@ const app = new Vue({
             });
 
             this.users.pop(user);
-        },
-
-        fetchUsers() {
-            window.axios.get('/chat/users').then(response => {
-                this.users = response.data;
-            }).catch(function (error) {
-                console.log(error);
-            });
         }
     }
 });
@@ -167,11 +115,10 @@ window.Echo.join('chat')
     .listen('UserAdded', (e) => {
         this.users.push({
             user: e.user
+            //'name', 'email', 'join_time'
+
         });
     })
     .listen('UserDeleted', (e) => {
         e.name + ' user deleted.';
     });
-
-
-

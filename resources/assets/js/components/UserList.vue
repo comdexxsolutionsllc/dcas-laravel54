@@ -16,6 +16,8 @@
     export default {
         props: ['users'],
         created() {
+            this.$emit('chat-loaded');
+
             return this.users;
         },
         watch: {
@@ -25,6 +27,6 @@
                 },
                 deep: true
             }
-        },
+        }
     }
 </script>
