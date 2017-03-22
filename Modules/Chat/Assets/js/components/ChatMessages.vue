@@ -18,6 +18,9 @@
 
 <script>
     export default {
-        props: ['messages']
+        props: ['messages'],
+        created() {
+            this.$emit('ulmount');
+        }
     };
 </script>

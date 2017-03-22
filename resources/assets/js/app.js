@@ -6,7 +6,6 @@
 
 require('./bootstrap');
 import Vue from 'vue'
-import SweetAlert from 'sweetalert'
 
 Vue.filter(
     'formatDate',
@@ -22,6 +21,21 @@ Vue.filter(
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+window.Event = new class {
+
+    constructor() {
+        this.vue = new Vue();
+    }
+
+    fire(event, data = null) {
+        this.vue.$emit(event, data);
+    }
+
+    listen(event, callback) {
+        this.vue.$on(event, callback);
+    }
+
+}
 
 Vue.component(
     'passport-clients',

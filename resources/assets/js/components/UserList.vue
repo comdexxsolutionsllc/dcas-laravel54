@@ -1,6 +1,6 @@
 <template>
     <ul class="user-list columns">
-        <li class="left clearfix column" v-for="user in users[0]">
+        <li class="left clearfix column" v-for="user in users">
             <div class="chat-body clearfix">
                 <div class="header">
                     <strong class="primary-font" style="font-size: 12px">
@@ -14,19 +14,6 @@
 
 <script>
     export default {
-        props: ['users'],
-        created() {
-            this.$emit('chat-loaded');
-
-            return this.users;
-        },
-        watch: {
-            users: {
-                handler: function (val, oldVal) {
-                    return this.users;
-                },
-                deep: true
-            }
-        }
+        props: ['users']
     }
 </script>

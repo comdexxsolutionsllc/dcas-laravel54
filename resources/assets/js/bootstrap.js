@@ -1,22 +1,12 @@
 import Echo from "laravel-echo"
 import moment from 'moment'
-import VueStash from 'vue-stash';
+import SweetAlert from 'sweetalert'
+import VueStash from 'vue-stash'
 
 /**
  import Meta from 'vue-meta'
  import VueViewports from 'vue-viewports'
  */
-
-// window._ = require('lodash');
-
-/**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
- */
-
-// window.$ = window.jQuery = require('jquery');
-// require('bootstrap-sass');
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
@@ -26,8 +16,6 @@ import VueStash from 'vue-stash';
 
 window.Vue = require('vue');
 require('vue-resource');
-
-// Vue.use(VueViewports, { 420: 'mobile', 768: 'tablet', 1024: 'desktop', 1920: 'hd-desktop', 2560: 'qhd-desktop', 3840: 'uhd-desktop' })
 
 Vue.http.interceptors.push((request, next) => {
     request.headers['X-CSRF-TOKEN'] = Laravel.csrfToken;

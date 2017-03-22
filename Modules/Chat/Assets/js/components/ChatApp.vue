@@ -11,7 +11,7 @@
                         <chat-form @messagesent="addMessage" :user="auth"></chat-form>
                     </div>
                     <div class="panel-footer">
-                        <user-list :users="users"></user-list>
+                        <user-list @ulmount="fetchUsers" :users="users"></user-list>
                     </div>
                 </div>
             </div>
@@ -34,6 +34,15 @@
 
         mounted() {
             this.auth = this.getAuth();
+        },
+
+        watch: {
+            users: function (val) {
+                return this.fetchUsers();
+            },
+            messages: function (val) {
+                return this.fetchMessages();
+            },
         },
 
         data() {
