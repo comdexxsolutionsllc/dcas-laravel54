@@ -8,7 +8,14 @@ use Illuminate\Http\Request;
 
 class RestrictByIP {
 
-    use \GetRemoteIP;
+    use GetRemoteIP;
+
+    /**
+     * @var array whitelist of IP addresses to allow viewing application.
+     */
+    protected $whitelist = [
+        '76.186.126.92'
+    ];
 
 
     /**
@@ -21,6 +28,7 @@ class RestrictByIP {
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        return (self::isAllowed()) ? $next($request) : abort(403,
+            "Your IP address is not in the application's whitelist.  Please contact the system administrator for more information.");
     }
 }
