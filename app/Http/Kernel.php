@@ -57,11 +57,15 @@ class Kernel extends HttpKernel {
         'can'                   => \Illuminate\Auth\Middleware\Authorize::class,
         'guest'                 => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle'              => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+
         'impersonate'           => \App\Http\Middleware\Impersonate::class,
+
         'role'                  => \Zizaco\Entrust\Middleware\EntrustRole::class,
         'permission'            => \Zizaco\Entrust\Middleware\EntrustPermission::class,
         'ability'               => \Zizaco\Entrust\Middleware\EntrustAbility::class,
+
         'admin'                 => \Modules\Internal\Http\Middleware\AdminMiddleware::class,
+
         'restrict.ip.main'      => \App\Http\Middleware\RestrictByIP::class,
         'restrict.ip.api'       => \Modules\Panel\Http\Middleware\RestrictByIP::class,
         'restrict.ip.chat'      => \Modules\Panel\Http\Middleware\RestrictByIP::class,

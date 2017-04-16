@@ -12,13 +12,14 @@ const {mix} = require('laravel-mix');
  */
 
 
-mix.copy('Modules/Chat/Assets/js/components/*.vue', 'resources/assets/js/components/')
-    .copy('Modules/Chat/Assets/js/*.js', 'resources/assets/js/')
-    .copy('../.bashrc', 'utility_files/')
-    .js('resources/assets/js/app.js', 'public/js')
-    .sourceMaps()
-    .sass('resources/assets/sass/app.scss', 'public/css')
-    .version(['css/app.css', 'js/app.js'])
-    .combine(['Modules/Chat/Assets/css/*.css'], 'public/css/chat-vendor.css')
-    .version(['css/chat-vendor.css']);
+mix.js('resources/assets/js/app.js', 'public/js').sass('resources/assets/sass/app.scss', 'public/css');
 
+/*
+ |  .copy('Modules/Chat/Assets/js/components/*.vue', 'resources/assets/js/components/')
+ |  .copy('Modules/Chat/Assets/js/*.js', 'resources/assets/js/')
+ |  .copy('../.bashrc', 'utility_files/')
+ |  .sourceMaps()
+ |	.combine(['Modules/Chat/Assets/css/*.css'], 'public/css/chat-vendor.*.css')
+ |    	.version(['css/app.css', 'js/app.js']);
+ | 	.version(['css/chat-vendor.css'])
+ */
