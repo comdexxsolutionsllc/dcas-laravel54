@@ -23,8 +23,9 @@ trait GetRemoteIP {
             {
                 foreach (explode(',', $_SERVER[$key]) as $ip)
                 {
-                    if (filter_var(trim($ip), FILTER_VALIDATE_IP,
-                            FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE))
+//                    if (filter_var(trim($ip), FILTER_VALIDATE_IP,
+//                            FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE))
+                    if (filter_var(trim($ip), FILTER_VALIDATE_IP))
                         return $ip;
                 }
             }

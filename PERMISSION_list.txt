@@ -1,0 +1,64 @@
+NAME                            DISPLAY_NAME                                            DESCRIPTION
+------------------------------------------------------------------------------------------------------------------------------
+* api_administrator
+create_endpoint
+read_endpoint
+update_endpoint
+destroy_endpoint
+
+* chat_administrator
+create_user
+read_user
+update_user
+destroy_user
+archive_chat
+unarchive_chat
+read_chat
+destroy_chat
+search_chat
+
+* internal_administrator
+
+
+* messenger_administrator
+create_user
+read_user
+update_user
+destroy_user
+archive_chat
+unarchive_chat
+read_chat
+destroy_chat
+search_chat
+
+* panel_administrator
+
+
+* caching_administrator
+create_cache_database
+destroy_cache_database
+search_cache_database
+transfer_cache_database
+backup_cache_database
+
+* database_administrator
+
+
+* logging_administrator
+create_log
+assign_logging_task
+search_log
+destroy_log
+archive_log
+unarchive_log
+transfer_log
+
+* testing_administrator
+create_test
+read_test
+update_test
+destroy_test
+show_failed_test
+show_passed_test
+view_failed_test_screenshot
+run_test

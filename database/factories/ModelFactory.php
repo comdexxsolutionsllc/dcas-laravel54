@@ -23,9 +23,9 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'card_brand' => null,
         'card_last_four' => null,
         'trial_ends_at' => null,
-        'last_logged_in_at' => null,
+        'last_logged_in_at' => $faker->unixTime,
         'remember_token' => str_random(10),
         'created_at' => $faker->unixTime,
-        'updated_at' => null
+        'updated_at' => $faker->unixTime
     ];
 });

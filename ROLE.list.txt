@@ -1,0 +1,24 @@
+NAME                            DISPLAY_NAME                                            DESCRIPTION
+------------------------------------------------------------------------------------------------------------------------------
+root_administrator              Root Administrator                                      User is the owner of the entire system
+*
+
+api_administrator               API Backend System Administrator                        User is the owner of the backend API systems
+*
+
+chat_administrator              Chat System Administrator                               User is the owner of the chat systems
+*
+
+internal_administrator          Internal Billing/Sales/Support/Vendor Administrator     User is the owner of the internal company systems
+*
+
+messenger_administrator
+*
+
+panel_administrator             Frontend Customer System Administrator                  User is the owner of the front facing customer panel
+*
+
+caching_administrator           Caching Administrator                                   User is the administrator in charge of the B.E. Caching systems
+database_administrator          Database Administrator                                  User is the administrator in charge of the database systems
+logging_administrator           Logging Administrator                                   User is the administrator in charge of syslog/netflow/etc systems
+testing_administrator           Code Testing Administrator                              User that is allowed to run tests on system code

@@ -14,6 +14,7 @@ class RestrictByIP {
      * @var array whitelist of IP addresses to allow viewing application.
      */
     protected $whitelist = [
+        '127.0.0.1',
         '76.186.126.92'
     ];
 

@@ -63,6 +63,18 @@ class User extends Authenticatable {
 
 
     /**
+     * Get the user's created at date.
+     *
+     * @param  string $value
+     *
+     * @return string
+     */
+    public function getCreatedAtAttribute($value)
+    {
+        return $value ?? Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans() ?? '';
+    }
+
+    /**
      * Get the user's last logged-in date.
      *
      * @param  string $value
@@ -74,6 +86,18 @@ class User extends Authenticatable {
         return $value ?? Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans() ?? 'null';
     }
 
+
+    /**
+     * Get the user's trial end date.
+     *
+     * @param  string $value
+     *
+     * @return string
+     */
+    public function getTrialEndsAtAttribute($value)
+    {
+        return $value ?? Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans() ?? '';
+    }
 
     /**
      * Get the user's updated at date.

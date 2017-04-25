@@ -198,7 +198,7 @@ return [
         GBarak\ViewCrudGenerator\ViewCrudServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Rinvex\Repository\Providers\RepositoryServiceProvider::class,
-	Evercode1\ViewMaker\ViewMakerServiceProvider::class,
+	    Evercode1\ViewMaker\ViewMakerServiceProvider::class,
 
 
     ],
