@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
 
-class DatabaseSeeder extends Seeder {
+class DatabaseSeeder extends Seeder
+{
 
     /**
      * Run the database seeds.
@@ -14,7 +16,14 @@ class DatabaseSeeder extends Seeder {
         Model::unguard();
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
 
-        // $this->call(UsersTableSeeder::class);
+        $this->call(ClicksTableSeeder::class);
+//        $this->call(LanguageLinesTableSeeder::class);
+        $this->call(ParticipantsTableSeeder::class);
+        $this->call(PermissionsTableSeeder::class);
+        $this->call(RolesTableSeeder::class);
+        $this->call(SubscriptionsTableSeeder::class);
+        $this->call(ThreadsTableSeeder::class);
+        $this->call(UsersTableSeeder::class);
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
         Model::reguard();
