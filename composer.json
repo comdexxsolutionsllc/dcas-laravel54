@@ -36,6 +36,7 @@
         "spatie/laravel-fractal": "^3.0.0",
         "spatie/laravel-translation-loader": "^1.1",
         "stripe/stripe-php": "~3.0",
+        "tasioleiva/laravel-usercommands": "^0.1.0",
         "yajra/laravel-datatables-oracle": "^7.0",
         "zizaco/entrust": "5.2.x-dev"
     },

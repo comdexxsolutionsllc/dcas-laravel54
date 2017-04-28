@@ -199,6 +199,8 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Rinvex\Repository\Providers\RepositoryServiceProvider::class,
 	    Evercode1\ViewMaker\ViewMakerServiceProvider::class,
+        TasioLeiva\LaravelUserCommands\LaravelUserCommandsServiceProvider::class
+
 
 
     ],
