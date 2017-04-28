@@ -9,7 +9,8 @@ Route::group([
 
     Route::get('/test', function ()
     {
-        return Modules\Api\Exceptions\UnsupportedMediaTypeException::send();
+        //return Modules\Api\Exceptions\UnsupportedMediaTypeException::send();
+        return API::getSomeData(null);
     });
 
 //|                      | POST      | photos                                  | photos.store     | Modules\Api\Http\Controllers\ApiController@store                           |                      |

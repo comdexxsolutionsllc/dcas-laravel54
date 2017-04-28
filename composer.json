@@ -6,6 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "artem-schander/l5-modular": "^1.4",
         "barryvdh/laravel-debugbar": "^2.3",
         "cmgmyr/messenger": "2.13.*",
         "doctrine/dbal": "^2.5",
@@ -30,6 +31,7 @@
         "mirzabusatlic/laravel-schedule-monitor": "^1.01",
         "nwidart/laravel-modules": "^1.13",
         "predis/predis": "^1.1",
+        "projectmentor/laravel-quota": "*@dev",
         "pusher/pusher-php-server": "^2.6",
         "rinvex/repository": "2.0.*",
         "silber/bouncer": "v1.0.0-beta.2",
@@ -63,7 +65,7 @@
         "psr-4": {
             "App\\": "app/",
             "DCASDomain\\": "app/DCASDomain",
-            "Modules\\": "Modules/"
+            "Modules\\": "app/Modules"
         }
     },
     "autoload-dev": {

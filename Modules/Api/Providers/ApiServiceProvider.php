@@ -43,10 +43,10 @@ class ApiServiceProvider extends ServiceProvider
     protected function registerConfig()
     {
         $this->publishes([
-            __DIR__.'/../Config/config.php' => config_path('api.php'),
+            __DIR__ . '/../Config/config.php' => config_path('api.php'),
         ], 'config');
         $this->mergeConfigFrom(
-            __DIR__.'/../Config/config.php', 'api'
+            __DIR__ . '/../Config/config.php', 'api'
         );
     }
 
@@ -59,7 +59,7 @@ class ApiServiceProvider extends ServiceProvider
     {
         $viewPath = base_path('resources/views/modules/api');
 
-        $sourcePath = __DIR__.'/../Resources/views';
+        $sourcePath = __DIR__ . '/../Resources/views';
 
         $this->publishes([
             $sourcePath => $viewPath
@@ -82,7 +82,7 @@ class ApiServiceProvider extends ServiceProvider
         if (is_dir($langPath)) {
             $this->loadTranslationsFrom($langPath, 'api');
         } else {
-            $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', 'api');
+            $this->loadTranslationsFrom(__DIR__ . '/../Resources/lang', 'api');
         }
     }
 

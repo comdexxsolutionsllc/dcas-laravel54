@@ -186,7 +186,6 @@ return [
          */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
-        Nwidart\Modules\LaravelModulesServiceProvider::class,
         Busatlic\ScheduleMonitor\ScheduleMonitorServiceProvider::class,
         Spatie\TranslationLoader\TranslationServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
@@ -199,8 +198,9 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Rinvex\Repository\Providers\RepositoryServiceProvider::class,
 	    Evercode1\ViewMaker\ViewMakerServiceProvider::class,
-        TasioLeiva\LaravelUserCommands\LaravelUserCommandsServiceProvider::class
-
+        TasioLeiva\LaravelUserCommands\LaravelUserCommandsServiceProvider::class,
+        Projectmentor\Quota\QuotaServiceProvider::class,
+        ArtemSchander\L5Modular\ModuleServiceProvider::class,
 
 
     ],
@@ -255,7 +255,6 @@ return [
         /**
          * Vendor aliases...
          */
-        'Module'       => Nwidart\Modules\Facades\Module::class,
         'Socialite'    => Laravel\Socialite\Facades\Socialite::class,
         'Datatables'   => Yajra\Datatables\Facades\Datatables::class,
         'Form'         => Collective\Html\FormFacade::class,
@@ -264,6 +263,7 @@ return [
         'Activity'     => Kim\Activity\ActivityFacade::class,
         'Menu'         => Lavary\Menu\Facade::class,
         'Debugbar'     => Barryvdh\Debugbar\Facade::class,
+        'Quota'        => Projectmentor\Quota\Facades\Quota::class,
 
     ],
 
