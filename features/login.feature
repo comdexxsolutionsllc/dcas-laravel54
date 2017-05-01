@@ -9,6 +9,4 @@ Feature: Login
     
     Scenario: Dashboard is locked to guests
         When I go to "home"
-        Then the url should match "login"
-        And I go to "datatables"
-        Then the url should match "login"
+        Then the url should match "/login"

@@ -29,7 +29,6 @@
         "league/fractal": "0.14.0",
         "league/pipeline": "^0.3.0",
         "mirzabusatlic/laravel-schedule-monitor": "^1.01",
-        "nwidart/laravel-modules": "^1.13",
         "predis/predis": "^1.1",
         "projectmentor/laravel-quota": "*@dev",
         "pusher/pusher-php-server": "^2.6",

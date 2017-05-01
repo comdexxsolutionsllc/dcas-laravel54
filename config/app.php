@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://dcas.dev'),
 
     /*
     |--------------------------------------------------------------------------
@@ -255,15 +255,15 @@ return [
         /**
          * Vendor aliases...
          */
-        'Socialite'    => Laravel\Socialite\Facades\Socialite::class,
+        'Activity'     => Kim\Activity\ActivityFacade::class,
         'Datatables'   => Yajra\Datatables\Facades\Datatables::class,
+        'Debugbar'     => Barryvdh\Debugbar\Facade::class,
+        'Entrust'      => Zizaco\Entrust\EntrustFacade::class,
         'Form'         => Collective\Html\FormFacade::class,
         'Html'         => Collective\Html\HtmlFacade::class,
-        'Entrust'      => Zizaco\Entrust\EntrustFacade::class,
-        'Activity'     => Kim\Activity\ActivityFacade::class,
         'Menu'         => Lavary\Menu\Facade::class,
-        'Debugbar'     => Barryvdh\Debugbar\Facade::class,
         'Quota'        => Projectmentor\Quota\Facades\Quota::class,
+        'Socialite'    => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 

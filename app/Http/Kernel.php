@@ -64,13 +64,8 @@ class Kernel extends HttpKernel {
         'permission'            => \Zizaco\Entrust\Middleware\EntrustPermission::class,
         'ability'               => \Zizaco\Entrust\Middleware\EntrustAbility::class,
 
-        'admin'                 => \Modules\Internal\Http\Middleware\AdminMiddleware::class,
+        'admin'                 => \App\Http\Middleware\AdminMiddleware::class,
 
-        'restrict.ip.main'      => \App\Http\Middleware\RestrictByIP::class,
-        'restrict.ip.api'       => \Modules\Panel\Http\Middleware\RestrictByIP::class,
-        'restrict.ip.chat'      => \Modules\Panel\Http\Middleware\RestrictByIP::class,
-        'restrict.ip.internal'  => \Modules\Panel\Http\Middleware\RestrictByIP::class,
-        'restrict.ip.messenger' => \Modules\Panel\Http\Middleware\RestrictByIP::class,
-        'restrict.ip.panel'     => \Modules\Panel\Http\Middleware\RestrictByIP::class,
+        'restrict.ip.main'      => \App\Http\Middleware\RestrictByIP::class
     ];
 }
