@@ -38953,10 +38953,6 @@ exports.default = {
 "use strict";
 
 
-var _pusherJs = __webpack_require__(205);
-
-var _pusherJs2 = _interopRequireDefault(_pusherJs);
-
 var _laravelEcho = __webpack_require__(165);
 
 var _laravelEcho2 = _interopRequireDefault(_laravelEcho);
@@ -38979,6 +38975,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  import Meta from 'vue-meta'
  import VueViewports from 'vue-viewports'
  */
+
+/**
+ * Pusher include due to breaking change before 30-April by library upstream owners
+ */
+window.Pusher = __webpack_require__(205);
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces

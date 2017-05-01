@@ -1,4 +1,3 @@
-import Pusher from "pusher-js"
 import Echo from "laravel-echo"
 import moment from 'moment'
 import SweetAlert from 'sweetalert'
@@ -8,6 +7,11 @@ import VueStash from 'vue-stash'
  import Meta from 'vue-meta'
  import VueViewports from 'vue-viewports'
  */
+
+/**
+ * Pusher include due to breaking change before 30-April by library upstream owners
+ */
+window.Pusher = require('pusher-js');
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
