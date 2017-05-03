@@ -180,6 +180,7 @@ return [
         App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\DcasApiServiceProvider::class,
 
         /**
          * Vendor Service Providers...
@@ -265,6 +266,7 @@ return [
         'Quota'        => Projectmentor\Quota\Facades\Quota::class,
         'Socialite'    => Laravel\Socialite\Facades\Socialite::class,
 
+        'API'          => Modules\Api\Facades\ApiHelper::class,
     ],
 
 ];

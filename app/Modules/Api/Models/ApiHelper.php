@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Api\Entities;
+namespace App\Modules\Api\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,6 +10,6 @@ class ApiHelper extends Model
 
     public function getSomeData($data)
     {
-        return 3;
+        return 4;
     }
 }

@@ -1,8 +1,9 @@
 <?php
 
-namespace Modules\Api\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Modules\Api\Facades\ApiHelper;
 
 class DcasApiServiceProvider extends ServiceProvider
 {
@@ -15,8 +16,6 @@ class DcasApiServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->bind('API', function() {
-            return new Modules\Api\Entities\ApiHelper;
-        });
+        $this->app->bind('apihelper', 'App\Modules\Api\Models\ApiHelper');
     }
 }

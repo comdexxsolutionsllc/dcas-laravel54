@@ -39021,7 +39021,7 @@ window.moment = _moment2.default;
 window.Echo = new _laravelEcho2.default({
   broadcaster: 'pusher',
   key: '891846d40fb294f5555e',
-  encrypted: false
+  encrypted: true
 });
 
 /***/ }),

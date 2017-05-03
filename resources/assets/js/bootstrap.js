@@ -53,5 +53,5 @@ window.moment = moment;
 window.Echo = new Echo({
     broadcaster: 'pusher',
     key: '891846d40fb294f5555e',
-    encrypted: false
+    encrypted: true
 });
