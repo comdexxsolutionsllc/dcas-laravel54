@@ -1,8 +1,9 @@
 <?php namespace App\Modules\Internal\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use App\BaseModel;
+//use Illuminate\Database\Eloquent\Model;
 
-class Internal extends Model {
+class Internal extends BaseModel {
 
 	//
 

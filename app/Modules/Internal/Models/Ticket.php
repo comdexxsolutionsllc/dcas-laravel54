@@ -2,9 +2,10 @@
 
 namespace Modules\Internal\Entities;
 
-use Illuminate\Database\Eloquent\Model;
+use App\BaseModel;
+//use Illuminate\Database\Eloquent\Model;
 
-class Ticket extends Model {
+class Ticket extends BaseModel {
 
     protected $fillable = [
         'user_id',

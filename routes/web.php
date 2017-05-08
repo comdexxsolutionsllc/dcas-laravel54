@@ -16,23 +16,25 @@ require_once('web_impersonate.php');
 require_once('web_cashier.php');
 
 
-Route::get('/', function ()
-{
+Route::get('/', function () {
     return view('welcome');
 })->middleware('restrict.ip.main');
 
 Route::get('/sitemap.xml', 'PagesController@sitemap');
 
 // Datatable routes...
-Route::get('datatables', [ 'uses' => 'HomeController@getIndex', 'as' => 'datatables' ]);
-Route::post('datatables/data', [ 'uses' => 'HomeController@anyData', 'as' => 'datatables.data' ]);
+Route::get('datatables', ['uses' => 'HomeController@getIndex', 'as' => 'datatables']);
+Route::post('datatables/data', ['uses' => 'HomeController@anyData', 'as' => 'datatables.data']);
 
 // Role routes...
 Route::resource('role', 'RoleController');
 
 
-Route::get('logoutnow', function() {
-   Auth::logout();
+// TODO:  Remove this for production
+if (App::environment() != 'production') {
+    Route::get('logoutnow', function () {
+        Auth::logout();
 
-    return redirect()->route('login');
-});
+        return redirect()->route('login');
+    });
+}

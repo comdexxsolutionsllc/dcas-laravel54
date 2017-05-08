@@ -2,9 +2,12 @@
 
 namespace App\Modules\Api\Models;
 
-use Illuminate\Database\Eloquent\Model;
+//use Illuminate\Database\Eloquent\Model;
 
-class ApiHelper extends Model
+
+use App\BaseModel;
+
+class ApiHelper extends BaseModel
 {
     protected $fillable = [];
 

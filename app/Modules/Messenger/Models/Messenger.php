@@ -1,8 +1,9 @@
 <?php namespace App\Modules\Messenger\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use App\BaseModel;
+//use Illuminate\Database\Eloquent\Model;
 
-class Messenger extends Model {
+class Messenger extends BaseModel {
 
 	//
 
