@@ -2,7 +2,7 @@ alias dir=ls
 alias artisan="php artisan"
 alias ga="git add --all ."
 alias gc="git commit"
-alias gl="git log"
+alias gl="git log --pretty=oneline"
 alias gp="git push"
 alias gs="git status"
 alias numberOfCommits='git log | grep commit | grep -v "first commit" | wc -l'

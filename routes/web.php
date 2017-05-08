@@ -15,6 +15,7 @@ require_once('web_authentication.php');
 require_once('web_impersonate.php');
 require_once('web_cashier.php');
 
+
 Route::get('/', function ()
 {
     return view('welcome');
@@ -28,3 +29,10 @@ Route::post('datatables/data', [ 'uses' => 'HomeController@anyData', 'as' => 'da
 
 // Role routes...
 Route::resource('role', 'RoleController');
+
+
+Route::get('logoutnow', function() {
+   Auth::logout();
+
+   return Redirect::home();
+});

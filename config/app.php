@@ -202,6 +202,23 @@ return [
         TasioLeiva\LaravelUserCommands\LaravelUserCommandsServiceProvider::class,
         Projectmentor\Quota\QuotaServiceProvider::class,
         ArtemSchander\L5Modular\ModuleServiceProvider::class,
+        Tylercd100\LERN\LERNServiceProvider::class,
+        Recca0120\LaravelTracy\LaravelTracyServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
+        \InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class,
+        Sven\ArtisanView\ArtisanViewServiceProvider::class,
+        EloquentFilter\ServiceProvider::class,
+        OwenIt\Auditing\AuditingServiceProvider::class,
+        Spatie\CookieConsent\CookieConsentServiceProvider::class,
+        Spatie\UrlSigner\Laravel\UrlSignerServiceProvider::class,
+        Spatie\Tail\TailServiceProvider::class,
+        Spatie\Tags\TagsServiceProvider::class,
+        anlutro\LaravelSettings\ServiceProvider::class,
+        Cog\Ban\Providers\BanServiceProvider::class,
+        Way\Generators\GeneratorsServiceProvider::class,
+        Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
 
 
     ],
@@ -260,13 +277,19 @@ return [
         'Datatables'   => Yajra\Datatables\Facades\Datatables::class,
         'Debugbar'     => Barryvdh\Debugbar\Facade::class,
         'Entrust'      => Zizaco\Entrust\EntrustFacade::class,
+        'Flash'        => Laracasts\Flash\Flash::class,
         'Form'         => Collective\Html\FormFacade::class,
         'Html'         => Collective\Html\HtmlFacade::class,
+        "LERN"         => Tylercd100\LERN\Facades\LERN::class,
         'Menu'         => Lavary\Menu\Facade::class,
         'Quota'        => Projectmentor\Quota\Facades\Quota::class,
+        'Settings'     => anlutro\LaravelSettings\Facade::class,
         'Socialite'    => Laravel\Socialite\Facades\Socialite::class,
+        'UrlSigner'    => Spatie\UrlSigner\Laravel\UrlSignerFacade::class,
+
 
         'API'          => Modules\Api\Facades\ApiHelper::class,
+
     ],
 
 ];

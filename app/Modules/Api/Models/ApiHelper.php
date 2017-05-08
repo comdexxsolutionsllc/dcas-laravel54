@@ -10,6 +10,6 @@ class ApiHelper extends Model
 
     public function getSomeData($data)
     {
-        return 4;
+        return response()->json([$data]);
     }
 }

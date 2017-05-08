@@ -6,7 +6,8 @@ use Busatlic\ScheduleMonitor\MonitorsSchedule;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
-class Kernel extends ConsoleKernel {
+class Kernel extends ConsoleKernel
+{
 
     use MonitorsSchedule;
 
@@ -31,6 +32,8 @@ class Kernel extends ConsoleKernel {
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+        $schedule->command('ban:delete-expired')->everyMinute();
 
         $this->monitor($schedule);
     }

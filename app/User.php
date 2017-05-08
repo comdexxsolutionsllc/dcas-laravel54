@@ -10,10 +10,17 @@ use Laravel\Cashier\Billable;
 use Laravel\Passport\HasApiTokens;
 use Session;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
+use OwenIt\Auditing\Auditable;
+use OwenIt\Auditing\Contracts\Auditable as AuditableContract;
+use Cog\Ban\Contracts\HasBans as HasBansContract;
+use Cog\Ban\Traits\HasBans;
 
-class User extends Authenticatable {
+class User extends Authenticatable implements AuditableContract, HasBansContract
+{
 
-    use Billable, EntrustUserTrait, HasApiTokens, Messagable, Notifiable;
+    use Auditable, Billable, EntrustUserTrait, HasApiTokens, HasBans, Messagable, Notifiable;
+
+    protected $dateFormat = 'Y-m-d H:i';
 
     /**
      * The attributes that should be autocast to a Carbon instance.
@@ -71,7 +78,7 @@ class User extends Authenticatable {
      */
     public function getCreatedAtAttribute($value)
     {
-        return $value ?? Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans() ?? '';
+        return $value ?? Carbon::createFromFormat('Y-m-d H:i', $value)->diffForHumans() ?? '';
     }
 
     /**
@@ -83,7 +90,7 @@ class User extends Authenticatable {
      */
     public function getLastLoggedInAtAttribute($value)
     {
-        return $value ?? Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans() ?? 'null';
+        return $value ?? Carbon::createFromFormat('Y-m-d H:i', $value)->diffForHumans() ?? 'null';
     }
 
 
@@ -96,7 +103,7 @@ class User extends Authenticatable {
      */
     public function getTrialEndsAtAttribute($value)
     {
-        return $value ?? Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans() ?? '';
+        return $value ?? Carbon::createFromFormat('Y-m-d H:i', $value)->diffForHumans() ?? '';
     }
 
     /**
@@ -108,7 +115,7 @@ class User extends Authenticatable {
      */
     public function getUpdatedAtAttribute($value)
     {
-        return $value ?? Carbon::createFromFormat('Y-m-d H:i:s', $value)->diffForHumans() ?? '';
+        return $value ?? Carbon::createFromFormat('Y-m-d H:i', $value)->diffForHumans() ?? '';
     }
 
 
