@@ -20,7 +20,7 @@ class User extends Authenticatable implements AuditableContract, HasBansContract
 
     use Auditable, Billable, EntrustUserTrait, HasApiTokens, HasBans, Messagable, Notifiable;
 
-    protected $dateFormat = 'Y-m-d H:i';
+//    protected $dateFormat = 'Y-m-d H:i';
 
     /**
      * The attributes that should be autocast to a Carbon instance.
@@ -76,10 +76,10 @@ class User extends Authenticatable implements AuditableContract, HasBansContract
      *
      * @return string
      */
-    public function getCreatedAtAttribute($value)
-    {
-        return $value ?? Carbon::createFromFormat('Y-m-d H:i', $value)->diffForHumans() ?? '';
-    }
+//    public function getCreatedAtAttribute($value)
+//    {
+//        return $value ?? Carbon::createFromFormat('Y-m-d H:i', $value)->diffForHumans() ?? '';
+//    }
 
     /**
      * Get the user's last logged-in date.
@@ -88,10 +88,10 @@ class User extends Authenticatable implements AuditableContract, HasBansContract
      *
      * @return string
      */
-    public function getLastLoggedInAtAttribute($value)
-    {
-        return $value ?? Carbon::createFromFormat('Y-m-d H:i', $value)->diffForHumans() ?? 'null';
-    }
+//    public function getLastLoggedInAtAttribute($value)
+//    {
+//        return $value ?? Carbon::createFromFormat('Y-m-d H:i', $value)->diffForHumans() ?? 'null';
+//    }
 
 
     /**
@@ -101,10 +101,10 @@ class User extends Authenticatable implements AuditableContract, HasBansContract
      *
      * @return string
      */
-    public function getTrialEndsAtAttribute($value)
-    {
-        return $value ?? Carbon::createFromFormat('Y-m-d H:i', $value)->diffForHumans() ?? '';
-    }
+//    public function getTrialEndsAtAttribute($value)
+//    {
+//        return $value ?? Carbon::createFromFormat('Y-m-d H:i', $value)->diffForHumans() ?? '';
+//    }
 
     /**
      * Get the user's updated at date.
@@ -113,10 +113,10 @@ class User extends Authenticatable implements AuditableContract, HasBansContract
      *
      * @return string
      */
-    public function getUpdatedAtAttribute($value)
-    {
-        return $value ?? Carbon::createFromFormat('Y-m-d H:i', $value)->diffForHumans() ?? '';
-    }
+//    public function getUpdatedAtAttribute($value)
+//    {
+//        return $value ?? Carbon::createFromFormat('Y-m-d H:i', $value)->diffForHumans() ?? '';
+//    }
 
 
     /**

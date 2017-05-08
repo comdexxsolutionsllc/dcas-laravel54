@@ -34,5 +34,5 @@ Route::resource('role', 'RoleController');
 Route::get('logoutnow', function() {
    Auth::logout();
 
-   return Redirect::home();
+    return redirect()->route('login');
 });
