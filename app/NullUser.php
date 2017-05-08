@@ -1,7 +1,9 @@
 <?php
+
 namespace App;
 
-class NullUser extends User {
+class NullUser extends User
+{
 
     /**
      * @var string (placeholder)

@@ -18,7 +18,13 @@ use Watson\Rememberable\Rememberable;
 
 abstract class BaseModel extends Revisionable implements AuditableContract, HasBansContract
 {
-    use Auditable, HasBans, Messagable, Notifiable, Rememberable, RevisionableTrait, SearchableTrait;
+    use Auditable,
+        HasBans,
+        Messagable,
+        Notifiable,
+        Rememberable,
+        RevisionableTrait,
+        SearchableTrait;
 
     /**
      * Searchable rules.
