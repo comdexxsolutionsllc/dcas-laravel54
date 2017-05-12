@@ -69,6 +69,8 @@ class Kernel extends HttpKernel {
         'permission'            => \Zizaco\Entrust\Middleware\EntrustPermission::class,
         'ability'               => \Zizaco\Entrust\Middleware\EntrustAbility::class,
 
+        'acceptJson'            => \OpenCetacean\JsonHeader\Middleware\AcceptJson::class,
+
         'admin'                 => \App\Http\Middleware\AdminMiddleware::class,
 
         'restrict.ip.main'      => \App\Http\Middleware\RestrictByIP::class

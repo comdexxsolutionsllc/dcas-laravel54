@@ -2,10 +2,10 @@
 
 Route::group(
     [
-        'module' => 'Api',
-        'middleware' => ['api'],
-        'namespace' => 'App\Modules\Api\Controllers',
-        'prefix' => 'api/v1'
+        'module'        => 'Api',
+        'middleware'    => ['api', 'acceptJson'],
+        'namespace'     => 'App\Modules\Api\Controllers',
+        'prefix'        => 'api/v1'
     ], function () {
 
     Route::resource('api', 'ApiController');
@@ -14,7 +14,7 @@ Route::group(
 
     Route::get('/test', function () {
         //return Modules\Api\Exceptions\UnsupportedMediaTypeException::send();
-        return API::getSomeData(null);
+        return API::getSomeData('fighting_words');
     });
 
 //|                      | POST      | photos                                  | photos.store     | Modules\Api\Http\Controllers\ApiController@store                           |                      |

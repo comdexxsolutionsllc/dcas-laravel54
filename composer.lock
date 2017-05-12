@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe22f42a924a8cc69d4bc26c90a88424",
+    "content-hash": "181184d2882643c3ff59ed88319cacca",
     "packages": [
         {
             "name": "anlutro/l4-settings",
@@ -1822,16 +1822,16 @@
         },
         {
             "name": "kalnoy/nestedset",
-            "version": "v4.2.4",
+            "version": "v4.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lazychaser/laravel-nestedset.git",
-                "reference": "16653f7e708fdd3f5c208877fe8a7b2272f1bd6c"
+                "reference": "774a648f0d42aa6d9c189b561d52b5f7ff2cc441"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lazychaser/laravel-nestedset/zipball/16653f7e708fdd3f5c208877fe8a7b2272f1bd6c",
-                "reference": "16653f7e708fdd3f5c208877fe8a7b2272f1bd6c",
+                "url": "https://api.github.com/repos/lazychaser/laravel-nestedset/zipball/774a648f0d42aa6d9c189b561d52b5f7ff2cc441",
+                "reference": "774a648f0d42aa6d9c189b561d52b5f7ff2cc441",
                 "shasum": ""
             },
             "require": {
@@ -1872,7 +1872,7 @@
                 "nested sets",
                 "nsm"
             ],
-            "time": "2017-04-12T17:32:55+00:00"
+            "time": "2017-05-12T06:21:25+00:00"
         },
         {
             "name": "kim/activity",
@@ -1969,16 +1969,16 @@
         },
         {
             "name": "laracasts/generators",
-            "version": "1.1.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laracasts/Laravel-5-Generators-Extended.git",
-                "reference": "d6afcc60dff846980393d59f6df2074b8a297b08"
+                "reference": "4e9ce5db9d93475ca27b993a92de3b15090aa139"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laracasts/Laravel-5-Generators-Extended/zipball/d6afcc60dff846980393d59f6df2074b8a297b08",
-                "reference": "d6afcc60dff846980393d59f6df2074b8a297b08",
+                "url": "https://api.github.com/repos/laracasts/Laravel-5-Generators-Extended/zipball/4e9ce5db9d93475ca27b993a92de3b15090aa139",
+                "reference": "4e9ce5db9d93475ca27b993a92de3b15090aa139",
                 "shasum": ""
             },
             "require": {
@@ -2009,7 +2009,7 @@
                 "generators",
                 "laravel"
             ],
-            "time": "2015-12-31T18:44:32+00:00"
+            "time": "2017-01-25T15:31:26+00:00"
         },
         {
             "name": "laracasts/presenter",
@@ -2212,16 +2212,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.21",
+            "version": "v5.4.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "2ed668f96d1a6ca42f50d5c87ee9ceecfc0a6eee"
+                "reference": "ad82327705658dbf5f0ce72805caa950dfbe150d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2ed668f96d1a6ca42f50d5c87ee9ceecfc0a6eee",
-                "reference": "2ed668f96d1a6ca42f50d5c87ee9ceecfc0a6eee",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/ad82327705658dbf5f0ce72805caa950dfbe150d",
+                "reference": "ad82327705658dbf5f0ce72805caa950dfbe150d",
                 "shasum": ""
             },
             "require": {
@@ -2337,7 +2337,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-04-28T15:40:01+00:00"
+            "time": "2017-05-11T20:10:35+00:00"
         },
         {
             "name": "laravel/passport",
@@ -3647,6 +3647,49 @@
             "time": "2017-03-05T18:23:57+00:00"
         },
         {
+            "name": "open-cetacean/laravel-json-header",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/open-cetacean/laravel-json-header.git",
+                "reference": "35e4e8d44244360167b5288dd6fda7f8941543ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/open-cetacean/laravel-json-header/zipball/35e4e8d44244360167b5288dd6fda7f8941543ab",
+                "reference": "35e4e8d44244360167b5288dd6fda7f8941543ab",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "OpenCetacean\\JsonHeader\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Open Cetacean",
+                    "email": "open-cetacean@users.noreply.github.com"
+                }
+            ],
+            "description": "Middleware to force Laravel API group to JSON header",
+            "keywords": [
+                "framework",
+                "header",
+                "json",
+                "laravel",
+                "middleware"
+            ],
+            "time": "2017-01-26T09:23:23+00:00"
+        },
+        {
             "name": "owen-it/laravel-auditing",
             "version": "v4.0.5",
             "source": {
@@ -4257,16 +4300,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.3",
+            "version": "v0.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e"
+                "reference": "17cf432bb80d9198df239b80d00a29155bd74d82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e",
-                "reference": "1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/17cf432bb80d9198df239b80d00a29155bd74d82",
+                "reference": "17cf432bb80d9198df239b80d00a29155bd74d82",
                 "shasum": ""
             },
             "require": {
@@ -4326,7 +4369,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-03-19T21:40:44+00:00"
+            "time": "2017-05-12T15:41:55+00:00"
         },
         {
             "name": "pusher/pusher-php-server",
@@ -5369,16 +5412,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.7",
+            "version": "v5.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4"
+                "reference": "9a06dc570a0367850280eefd3f1dc2da45aef517"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4",
-                "reference": "56db4ed32a6d5c9824c3ecc1d2e538f663f47eb4",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/9a06dc570a0367850280eefd3f1dc2da45aef517",
+                "reference": "9a06dc570a0367850280eefd3f1dc2da45aef517",
                 "shasum": ""
             },
             "require": {
@@ -5419,7 +5462,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2017-04-20T17:32:18+00:00"
+            "time": "2017-05-01T15:54:03+00:00"
         },
         {
             "name": "symfony/class-loader",
@@ -6363,16 +6406,16 @@
         },
         {
             "name": "tracy/tracy",
-            "version": "v2.4.6",
+            "version": "v2.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "c9fbca15b0a11d904c7783b7aad114182618d8d4"
+                "reference": "e9e93b778a75760a939593384e326fb65f9a0da2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/c9fbca15b0a11d904c7783b7aad114182618d8d4",
-                "reference": "c9fbca15b0a11d904c7783b7aad114182618d8d4",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/e9e93b778a75760a939593384e326fb65f9a0da2",
+                "reference": "e9e93b778a75760a939593384e326fb65f9a0da2",
                 "shasum": ""
             },
             "require": {
@@ -6383,6 +6426,9 @@
             "require-dev": {
                 "nette/di": "~2.3",
                 "nette/tester": "~2.0"
+            },
+            "suggest": {
+                "https://nette.org/donate": "\u001b[1;37;42m Please consider supporting Tracy via a donation \u001b[0m"
             },
             "type": "library",
             "extra": {
@@ -6414,14 +6460,16 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "Tracy: useful PHP debugger",
+            "description": "😎 Tracy: the addictive tool to ease debugging PHP code for cool developers. Friendly design, logging, profiler, advanced features like debugging AJAX calls or CLI support. You will love it.",
             "homepage": "https://tracy.nette.org",
             "keywords": [
+                "Xdebug",
                 "debug",
                 "debugger",
-                "nette"
+                "nette",
+                "profiler"
             ],
-            "time": "2017-01-29T19:39:20+00:00"
+            "time": "2017-05-11T14:28:35+00:00"
         },
         {
             "name": "true/punycode",
@@ -7132,16 +7180,16 @@
         },
         {
             "name": "zircote/swagger-php",
-            "version": "2.0.9",
+            "version": "2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zircote/swagger-php.git",
-                "reference": "b0b136e3c51c8b05d78a0ea3f1b60cd331cc3544"
+                "reference": "2f2482f85762ed4bb28a2491b3c42c9e30636479"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zircote/swagger-php/zipball/b0b136e3c51c8b05d78a0ea3f1b60cd331cc3544",
-                "reference": "b0b136e3c51c8b05d78a0ea3f1b60cd331cc3544",
+                "url": "https://api.github.com/repos/zircote/swagger-php/zipball/2f2482f85762ed4bb28a2491b3c42c9e30636479",
+                "reference": "2f2482f85762ed4bb28a2491b3c42c9e30636479",
                 "shasum": ""
             },
             "require": {
@@ -7190,7 +7238,7 @@
                 "rest",
                 "service discovery"
             ],
-            "time": "2017-02-22T23:16:25+00:00"
+            "time": "2017-05-12T13:30:15+00:00"
         },
         {
             "name": "zizaco/entrust",
@@ -7622,16 +7670,16 @@
         },
         {
             "name": "codeception/codeception",
-            "version": "2.2.10",
+            "version": "2.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "c32a3f92834db08ceedb4666ea2265c3aa43396e"
+                "reference": "a8681b416921ae282ccca2c485d75a3ed6756080"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/c32a3f92834db08ceedb4666ea2265c3aa43396e",
-                "reference": "c32a3f92834db08ceedb4666ea2265c3aa43396e",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/a8681b416921ae282ccca2c485d75a3ed6756080",
+                "reference": "a8681b416921ae282ccca2c485d75a3ed6756080",
                 "shasum": ""
             },
             "require": {
@@ -7642,9 +7690,10 @@
                 "guzzlehttp/guzzle": ">=4.1.4 <7.0",
                 "guzzlehttp/psr7": "~1.0",
                 "php": ">=5.4.0 <8.0",
-                "phpunit/php-code-coverage": ">=2.2.4 <5.0",
+                "phpunit/php-code-coverage": ">=2.2.4 <6.0",
                 "phpunit/phpunit": ">4.8.20 <6.0",
-                "sebastian/comparator": "~1.1",
+                "phpunit/phpunit-mock-objects": ">2.3 <5.0",
+                "sebastian/comparator": ">1.1 <3.0",
                 "sebastian/diff": "^1.4",
                 "stecman/symfony-console-completion": "^0.7.0",
                 "symfony/browser-kit": ">=2.7 <4.0",
@@ -7711,7 +7760,7 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2017-03-25T03:19:52+00:00"
+            "time": "2017-05-11T21:07:05+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -8368,16 +8417,16 @@
         },
         {
             "name": "phpspec/phpspec",
-            "version": "3.3.0",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/phpspec.git",
-                "reference": "1c77d11878c4bd475bc66f0eaa2686df0fcfa30f"
+                "reference": "2e969c7d8c6437490b7aa0ab51a3302d15bb7211"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/1c77d11878c4bd475bc66f0eaa2686df0fcfa30f",
-                "reference": "1c77d11878c4bd475bc66f0eaa2686df0fcfa30f",
+                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/2e969c7d8c6437490b7aa0ab51a3302d15bb7211",
+                "reference": "2e969c7d8c6437490b7aa0ab51a3302d15bb7211",
                 "shasum": ""
             },
             "require": {
@@ -8446,7 +8495,7 @@
                 "testing",
                 "tests"
             ],
-            "time": "2017-04-27T12:40:39+00:00"
+            "time": "2017-05-12T06:16:46+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -9943,7 +9992,14 @@
             "time": "2017-02-15T21:39:05+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "1.1.4",
+            "alias_normalized": "1.1.4.0",
+            "version": "9999999-dev",
+            "package": "laracasts/generators"
+        }
+    ],
     "minimum-stability": "stable",
     "stability-flags": {
         "infyomlabs/adminlte-templates": 20,
@@ -9952,7 +10008,8 @@
         "jlapp/swaggervel": 20,
         "projectmentor/laravel-quota": 20,
         "silber/bouncer": 10,
-        "zizaco/entrust": 20
+        "zizaco/entrust": 20,
+        "laracasts/generators": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

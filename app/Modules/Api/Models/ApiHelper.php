@@ -13,6 +13,6 @@ class ApiHelper extends BaseModel
 
     public function getSomeData($data)
     {
-        return response()->json([$data]);
+        return response()->json(['data' => $data]);
     }
 }

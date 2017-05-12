@@ -217,8 +217,8 @@ return [
         Spatie\Tags\TagsServiceProvider::class,
         anlutro\LaravelSettings\ServiceProvider::class,
         Cog\Ban\Providers\BanServiceProvider::class,
-        Way\Generators\GeneratorsServiceProvider::class,
         Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
+        Laracasts\Generators\GeneratorsServiceProvider::class,
 
 
     ],
