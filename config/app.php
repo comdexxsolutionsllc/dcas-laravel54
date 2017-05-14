@@ -220,7 +220,6 @@ return [
         Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
         Laracasts\Generators\GeneratorsServiceProvider::class,
 
-
     ],
 
     /*

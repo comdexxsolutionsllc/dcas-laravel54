@@ -11,8 +11,6 @@
                         <div id="onlineStats" class="panel panel-default">
                             <div id="numberOfUsersOnline" class="col-xs-5">Number of Users
                                 Online {{ $numberOfUsers }}</div>
-                            <div id="numberOfUsersOnline" class="col-xs-5">Number of Guests
-                                Online {{ $numberOfGuests }}</div>
                         </div>
                         <div id="onlineUsers" class="panel panel-default">
                             @foreach($activities as $activity)

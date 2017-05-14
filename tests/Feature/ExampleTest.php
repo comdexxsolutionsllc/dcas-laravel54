@@ -12,11 +12,12 @@ class ExampleTest extends TestCase
     use WithoutMiddleware;
 
     /**
+     * @test
      * A basic test example.
      *
      * @return void
      */
-    public function testBasicTest()
+    public function it_returns_200()
     {
         $response = $this->get('/');
 
