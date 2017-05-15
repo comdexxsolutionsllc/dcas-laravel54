@@ -1,4 +1,4 @@
-@extends('internal::layouts.master')
+@extends('Internal::layouts.master')
 
 @section('title', $ticket->title)
 
@@ -11,37 +11,42 @@
                 </div>
 
                 <div class="panel-body">
-                    @include('internal::includes.flash')
+                    @include('Internal::includes.flash')
 
                     <div class="ticket-info">
-                        <p>{{ $ticket->message }}</p>
-                        <p>Category: {{ $category->name }}</p>
-                        <p>
+                        <p>Category: &nbsp; {{ $category->name }}</p>
+                        <div style="float: left; width: auto;">
                             @if ($ticket->status === 'Open')
-                                Status: <span class="label label-success">{{ $ticket->status }}</span>
+                                Status: &nbsp; &nbsp; &nbsp; &nbsp; <span class="label label-success"
+                                                                          style="float: right; width: 100px;">{{ $ticket->status }}</span>
                             @else
-                                Status: <span class="label label-danger">{{ $ticket->status }}</span>
+                                Status: &nbsp; &nbsp; &nbsp; &nbsp; <span class="label label-danger"
+                                                                          style="float: right; width: 100px;">{{ $ticket->status }}</span>
                             @endif
-                        </p>
+                        </div>
+                        <p style="clear: both"></p>
                         <p>Created on: {{ $ticket->created_at->diffForHumans() }}</p>
+                        <p style="padding-top: 25px">{{ $ticket->message }}</p>
                     </div>
 
                     <hr>
 
-                    <div class="comments">
-                        @foreach ($comments as $comment)
-                            <div class="panel panel-@if($ticket->user->id === $comment->user_id) {{"default"}}@else{{"success"}}@endif">
-                                <div class="panel panel-heading">
-                                    {{ $comment->user->name }}
-                                    <span class="pull-right">{{ $comment->created_at->format('Y-m-d') }}</span>
-                                </div>
+                    @if (count($ticket['comments']))
+                        <div class="comments">
+                            @foreach ($ticket['comments'] as $comment)
+                                <div class="panel panel-@if($ticket->user->id === $comment->user_id) {{"default"}}@else{{"success"}}@endif">
+                                    <div class="panel panel-heading">
+                                        {{ $comment->user->name }}
+                                        <span class="pull-right">{{ $comment->created_at->format('Y-m-d') }}</span>
+                                    </div>
 
-                                <div class="panel panel-body">
-                                    {{ $comment->comment }}
+                                    <div class="panel panel-body">
+                                        {{ $comment->comment }}
+                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
-                    </div>
+                            @endforeach
+                        </div>
+                    @endif
 
                     <div class="comment-form">
                         <form action="{{ url('comment') }}" method="POST" class="form">

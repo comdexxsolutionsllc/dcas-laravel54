@@ -1,4 +1,4 @@
-@extends('internal::layouts.master')
+@extends('Internal::layouts.master')
 
 @section('title', 'My Tickets')
 

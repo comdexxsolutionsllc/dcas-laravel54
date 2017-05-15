@@ -1,15 +1,19 @@
 <?php
 
-namespace Modules\Internal\Http\Controllers;
+namespace App\Modules\Internal\Controllers;
 
+use Cache;
+use App\NullCategory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
-use Modules\Internal\Entities\Category;
-use Modules\Internal\Entities\Ticket;
+use App\Modules\Internal\Models\Category;
+use App\Modules\Internal\Models\Ticket;
 
 class TicketsController extends Controller {
+
+    protected $categories;
 
     /**
      * TicketsController constructor.
@@ -17,6 +21,10 @@ class TicketsController extends Controller {
     public function __construct()
     {
         $this->middleware('auth');
+
+        $this->categories = \Cache::remember('categories', 15, function() {
+            return Category::all();
+        });
     }
 
 
@@ -27,9 +35,9 @@ class TicketsController extends Controller {
     public function index()
     {
         $tickets = Ticket::paginate(10);
-        $categories = Category::all();
+        $categories = $this->categories;
 
-        return view('internal::tickets.index', compact('tickets', 'categories'));
+        return view('Internal::tickets.index', compact('tickets', 'categories'));
     }
 
 
@@ -39,9 +47,9 @@ class TicketsController extends Controller {
      */
     public function create()
     {
-        $categories = Category::all();
+        $categories = $this->categories;
 
-        return view('internal::tickets.create', compact('categories'));
+        return view('Internal::tickets.create', compact('categories'));
     }
 
 
@@ -86,13 +94,11 @@ class TicketsController extends Controller {
      */
     public function show($ticket_id)
     {
-        $ticket = Ticket::where('ticket_id', $ticket_id)->firstOrFail();
+        $ticket = Ticket::where('ticket_id', $ticket_id)->with('comments')->firstOrFail();
 
-        $comments = $ticket->comments;
+        $category = ($ticket->category ? $ticket->category : new NullCategory);
 
-        $category = $ticket->category;
-
-        return view('internal::tickets.show', compact('ticket', 'category', 'comments'));
+        return view('Internal::tickets.show', compact('ticket', 'category'));
     }
 
 
@@ -102,7 +108,7 @@ class TicketsController extends Controller {
      */
     public function edit()
     {
-        return view('internal::tickets.edit');
+        return view('Internal::tickets.edit');
     }
 
 
@@ -134,9 +140,9 @@ class TicketsController extends Controller {
     public function userTickets()
     {
         $tickets = Ticket::where('user_id', Auth::user()->id)->paginate(10);
-        $categories = Category::all();
+        $categories = $this->categories;
 
-        return view('internal::tickets.user_tickets', compact('tickets', 'categories'));
+        return view('Internal::tickets.user_tickets', compact('tickets', 'categories'));
     }
 
 

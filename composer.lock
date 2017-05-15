@@ -2734,16 +2734,16 @@
         },
         {
             "name": "laravelcollective/html",
-            "version": "v5.4.1",
+            "version": "v5.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "7570f25d58a00fd6909c0563808590f9cdb14d47"
+                "reference": "023efce5fd8057cb3b5ce503f3391cc4effa7caa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/7570f25d58a00fd6909c0563808590f9cdb14d47",
-                "reference": "7570f25d58a00fd6909c0563808590f9cdb14d47",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/023efce5fd8057cb3b5ce503f3391cc4effa7caa",
+                "reference": "023efce5fd8057cb3b5ce503f3391cc4effa7caa",
                 "shasum": ""
             },
             "require": {
@@ -2784,7 +2784,7 @@
             ],
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "http://laravelcollective.com",
-            "time": "2017-01-26T19:27:05+00:00"
+            "time": "2017-05-15T09:38:20+00:00"
         },
         {
             "name": "lavary/laravel-menu",
@@ -7090,16 +7090,16 @@
         },
         {
             "name": "watson/rememberable",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dwightwatson/rememberable.git",
-                "reference": "df5a8a6338fae6786d9d7c987cf1aa40779cdd9a"
+                "reference": "7c5475eac08b17f39745c4133ef48ee39943d053"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dwightwatson/rememberable/zipball/df5a8a6338fae6786d9d7c987cf1aa40779cdd9a",
-                "reference": "df5a8a6338fae6786d9d7c987cf1aa40779cdd9a",
+                "url": "https://api.github.com/repos/dwightwatson/rememberable/zipball/7c5475eac08b17f39745c4133ef48ee39943d053",
+                "reference": "7c5475eac08b17f39745c4133ef48ee39943d053",
                 "shasum": ""
             },
             "require": {
@@ -7134,7 +7134,7 @@
                 "laravel",
                 "remember"
             ],
-            "time": "2017-04-30T19:31:52+00:00"
+            "time": "2017-05-15T14:03:47+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -7526,21 +7526,21 @@
     "packages-dev": [
         {
             "name": "behat/behat",
-            "version": "v3.3.0",
+            "version": "v3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Behat.git",
-                "reference": "15a3a1857457eaa29cdf41564a5e421effb09526"
+                "reference": "44a58c1480d6144b2dc2c2bf02b9cef73c83840d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Behat/zipball/15a3a1857457eaa29cdf41564a5e421effb09526",
-                "reference": "15a3a1857457eaa29cdf41564a5e421effb09526",
+                "url": "https://api.github.com/repos/Behat/Behat/zipball/44a58c1480d6144b2dc2c2bf02b9cef73c83840d",
+                "reference": "44a58c1480d6144b2dc2c2bf02b9cef73c83840d",
                 "shasum": ""
             },
             "require": {
                 "behat/gherkin": "^4.4.4",
-                "behat/transliterator": "~1.0",
+                "behat/transliterator": "^1.2",
                 "container-interop/container-interop": "^1.1",
                 "ext-mbstring": "*",
                 "php": ">=5.3.3",
@@ -7604,7 +7604,7 @@
                 "symfony",
                 "testing"
             ],
-            "time": "2016-12-25T13:43:52+00:00"
+            "time": "2017-05-15T16:49:16+00:00"
         },
         {
             "name": "behat/gherkin",
