@@ -8,7 +8,8 @@ use Cache;
 use Datatables;
 use DB;
 
-class HomeController extends Controller {
+class HomeController extends Controller
+{
 
     /**
      * Create a new controller instance.
@@ -28,11 +29,19 @@ class HomeController extends Controller {
      */
     public function index()
     {
-        $activities = Activity::users(15)->mostRecent()->get();
-        $numberOfUsers = Activity::users()->count();
-        $numberOfGuests = Activity::guests()->count();
+        $activites = \Cache::remember('activities', 15, function () {
+            return Activity::users(15)->mostRecent()->get();
+        });
 
-        return view('home', compact('activities', 'numberOfUsers', 'numberOfGuests'));
+        $numberOfUsers = \Cache::remember('numberOfUsers', 10, function () {
+            return Activity::users()->count();
+        });
+
+        $numberOfGuests = \Cache::remember('numberOfGuests', 10, function () {
+            Activity::guests()->count();
+        });
+
+        return view('home');
     }
 
 
@@ -54,8 +63,7 @@ class HomeController extends Controller {
      */
     public function anyData()
     {
-        $users = Cache::remember('users', 10, function ()
-        {
+        $users = \Cache::remember('users', 10, function () {
             $query = DB::table('users')->select(DB::raw('id, name, email, last_logged_in_at, created_at, updated_at'))->get();
 
             return $query;

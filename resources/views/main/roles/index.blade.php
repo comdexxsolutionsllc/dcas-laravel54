@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container">
-        @if(count($roles))
-            @foreach($roles as $role)
+        @if(\Cache::get('role_count'))
+            @foreach(\Cache::get('roles') as $role)
                 <div class="row">
                     <ul>
                         <li><span>Name:</span>           {{ $role->name }}</li>

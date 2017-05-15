@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Role;
+use Cache;
+use DB;
 
 class RoleController extends Controller {
+
+    protected $count;
 
     /**
      * RoleController constructor.
@@ -13,6 +17,10 @@ class RoleController extends Controller {
     public function __construct()
     {
         $this->middleware('auth');
+
+        $this->count = \Cache::remember('role_count', 30, function() {
+            return \DB::raw('select count(id) from roles');
+        });
     }
 
 
@@ -23,9 +31,11 @@ class RoleController extends Controller {
      */
     public function index()
     {
-        $roles = Role::all();
+        $roles = \Cache::remember('roles', 30, function() {
+            return Role::all();
+        });
 
-        return view('main.roles.index', compact('roles'));
+        return view('main.roles.index');
     }
 
 
