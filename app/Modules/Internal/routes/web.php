@@ -16,4 +16,13 @@ Route::group(array('prefix' => 'internal', 'module' => 'Internal', 'middleware' 
         Route::get('tickets', 'TicketsController@index');
         Route::post('close_ticket/{ticket_id}', 'TicketsController@close');
     });
+
+    Route::get('/{locale}', function ($locale) {
+        echo trans('validation.required'); // returns 'This is a required field'
+        echo "<br>";
+
+        app()->setLocale('nl');
+
+        echo trans('validation.required'); // returns 'Dit is een verplicht veld'
+    });
 });

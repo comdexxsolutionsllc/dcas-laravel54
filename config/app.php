@@ -219,6 +219,7 @@ return [
         Cog\Ban\Providers\BanServiceProvider::class,
         Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
         Laracasts\Generators\GeneratorsServiceProvider::class,
+        Spatie\Translatable\TranslatableServiceProvider::class,
 
     ],
 

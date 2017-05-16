@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3b51f4d57353a22ac72649a87a17e6b",
+    "content-hash": "101c0ba26684f12c3199968bbb29e7b8",
     "packages": [
         {
             "name": "anlutro/l4-settings",
@@ -2562,16 +2562,16 @@
         },
         {
             "name": "laravel/scout",
-            "version": "v3.0.3",
+            "version": "v3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/scout.git",
-                "reference": "64d28db58a054174eadf1d4df38dad81ff7e68dd"
+                "reference": "c822eaff08929439879407ffa27de7966f3c5926"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/scout/zipball/64d28db58a054174eadf1d4df38dad81ff7e68dd",
-                "reference": "64d28db58a054174eadf1d4df38dad81ff7e68dd",
+                "url": "https://api.github.com/repos/laravel/scout/zipball/c822eaff08929439879407ffa27de7966f3c5926",
+                "reference": "c822eaff08929439879407ffa27de7966f3c5926",
                 "shasum": ""
             },
             "require": {
@@ -2618,7 +2618,7 @@
                 "laravel",
                 "search"
             ],
-            "time": "2017-04-09T00:54:26+00:00"
+            "time": "2017-05-09T12:31:27+00:00"
         },
         {
             "name": "laravel/socialite",
@@ -5298,16 +5298,16 @@
         },
         {
             "name": "spatie/laravel-translation-loader",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-translation-loader.git",
-                "reference": "bac6e41a00b49d13ecece518a6be7634d995c96e"
+                "reference": "0edb31e56275c9971e729cc621fa29372b29ad0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-translation-loader/zipball/bac6e41a00b49d13ecece518a6be7634d995c96e",
-                "reference": "bac6e41a00b49d13ecece518a6be7634d995c96e",
+                "url": "https://api.github.com/repos/spatie/laravel-translation-loader/zipball/0edb31e56275c9971e729cc621fa29372b29ad0b",
+                "reference": "0edb31e56275c9971e729cc621fa29372b29ad0b",
                 "shasum": ""
             },
             "require": {
@@ -5352,7 +5352,7 @@
                 "spatie",
                 "translate"
             ],
-            "time": "2017-01-23T09:14:49+00:00"
+            "time": "2017-05-16T12:41:12+00:00"
         },
         {
             "name": "spatie/laravel-url-signer",
