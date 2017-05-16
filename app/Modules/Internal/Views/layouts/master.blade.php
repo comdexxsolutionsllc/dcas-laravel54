@@ -9,5 +9,7 @@
     </head>
     <body>
         @yield('content')
+
+        <script type="application/javascript" src="{{ mix('/js/app.js') }}"></script>
     </body>
 </html>

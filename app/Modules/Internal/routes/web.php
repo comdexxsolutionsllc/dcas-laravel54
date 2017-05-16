@@ -1,6 +1,6 @@
 <?php
 
-Route::group(array('module' => 'Internal', 'middleware' => ['web'], 'namespace' => 'App\Modules\Internal\Controllers'), function() {
+Route::group(array('prefix' => 'internal', 'module' => 'Internal', 'middleware' => ['web'], 'namespace' => 'App\Modules\Internal\Controllers'), function() {
 
 //    Route::resource('internal', 'InternalController');
     Route::get('/', 'InternalController@home');
