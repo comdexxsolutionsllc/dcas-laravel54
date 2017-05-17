@@ -4,6 +4,7 @@ namespace App;
 
 use Carbon\Carbon;
 use Cmgmyr\Messenger\Traits\Messagable;
+use DCASDomain\Traits\Encryptable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Cashier\Billable;
@@ -18,7 +19,11 @@ use Cog\Ban\Traits\HasBans;
 class User extends Authenticatable implements AuditableContract, HasBansContract
 {
 
-    use Auditable, Billable, EntrustUserTrait, HasApiTokens, HasBans, Messagable, Notifiable;
+    use Auditable, Billable, Encryptable, EntrustUserTrait, HasApiTokens, HasBans, Messagable, Notifiable;
+
+    protected $encryptable = [
+        'email'
+    ];
 
 //    protected $dateFormat = 'Y-m-d H:i';
 
