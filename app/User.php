@@ -21,8 +21,14 @@ class User extends Authenticatable implements AuditableContract, HasBansContract
 
     use Auditable, Billable, Encryptable, EntrustUserTrait, HasApiTokens, HasBans, Messagable, Notifiable;
 
+    /**
+     * @var array
+     * @note DO NOT encrypt email, password
+     */
     protected $encryptable = [
-        'email'
+        'name',
+        'card_brand',
+        'card_last_four'
     ];
 
 //    protected $dateFormat = 'Y-m-d H:i';

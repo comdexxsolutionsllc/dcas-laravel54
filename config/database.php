@@ -41,6 +41,9 @@ return [
 
         'mysql' => [
             //  https://answers.launchpad.net/maria/+question/241612
+            // set global innodb_large_prefix=on
+            // set global innodb_file_format=Barracuda
+
             'driver' => 'mysql',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
