@@ -41,7 +41,7 @@ class HomeController extends Controller
             Activity::guests()->count();
         });
 
-        return view('home');
+        return view('dashboard');
     }
 
 

@@ -16,18 +16,31 @@ require_once('web_impersonate.php');
 require_once('web_cashier.php');
 
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware('restrict.ip.main');
+Route::group(['middleware' => 'timeout'], function () {
+    Route::get('/', function () {
+        return view('welcome');
+    })->middleware('restrict.ip.main');
 
-Route::get('/sitemap.xml', 'PagesController@sitemap');
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware(['auth'])->name('dashboard');
+
+    /**
+     * ? How do I disable /home
+     */
+    Route::get('/home', function () {
+        return redirect('dashboard');
+    });
+
+    Route::get('/sitemap.xml', 'PagesController@sitemap');
 
 // Datatable routes...
-Route::get('datatables', ['uses' => 'HomeController@getIndex', 'as' => 'datatables']);
-Route::post('datatables/data', ['uses' => 'HomeController@anyData', 'as' => 'datatables.data']);
+    Route::get('datatables', ['uses' => 'HomeController@getIndex', 'as' => 'datatables']);
+    Route::post('datatables/data', ['uses' => 'HomeController@anyData', 'as' => 'datatables.data']);
 
 // Role routes...
-Route::resource('role', 'RoleController');
+    Route::resource('role', 'RoleController');
+});
 
 
 // TODO:  Remove this for production

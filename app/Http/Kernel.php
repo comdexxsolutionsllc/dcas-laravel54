@@ -73,6 +73,8 @@ class Kernel extends HttpKernel {
 
         'admin'                 => \App\Http\Middleware\AdminMiddleware::class,
 
+        'timeout'               => \App\Http\Middleware\SessionTimeout::class,
+
         'restrict.ip.main'      => \App\Http\Middleware\RestrictByIP::class
     ];
 }
