@@ -25,13 +25,6 @@ Route::group(['middleware' => 'timeout'], function () {
         return view('dashboard');
     })->middleware(['auth'])->name('dashboard');
 
-    /**
-     * ? How do I disable /home
-     */
-    Route::get('/home', function () {
-        return redirect('dashboard');
-    });
-
     Route::get('/sitemap.xml', 'PagesController@sitemap');
 
 // Datatable routes...
