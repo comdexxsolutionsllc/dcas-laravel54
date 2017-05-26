@@ -9,14 +9,6 @@ class ActivityObserver
     /**
      * @param Activity $activity
      */
-    public function creating(Activity $activity)
-    {
-        dd($activity);
-    }
-
-    /**
-     * @param Activity $activity
-     */
     public function created(Activity $activity)
     {
         app('cache')->forget('activities');

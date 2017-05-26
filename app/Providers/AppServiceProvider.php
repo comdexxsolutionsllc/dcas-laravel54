@@ -24,11 +24,6 @@ class AppServiceProvider extends ServiceProvider
 
         \View::composer('*', DashboardComposer::class);
 
-
-        \View::composer('layouts.app', function ($view) {
-            $view->with('users', \App\User::all());
-        });
-
         User::observe(UserObserver::class);
         ActivityExtend::observe(ActivityObserver::class);
     }

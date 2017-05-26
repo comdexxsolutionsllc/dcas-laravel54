@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Activity;
 use Cache;
 use Datatables;
 use DB;
@@ -52,7 +50,7 @@ class HomeController extends Controller
     public function anyData()
     {
         $users = \Cache::remember('users', 10, function () {
-            $query = DB::table('users')->select(DB::raw('id, name, email, last_logged_in_at, created_at, updated_at'))->get();
+            $query = \DB::table('users')->select(DB::raw('id, name, email, last_logged_in_at, created_at, updated_at'))->get();
 
             return $query;
         });
