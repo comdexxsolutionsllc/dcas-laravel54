@@ -9,16 +9,16 @@
 
                     <div class="panel-body">
                         <div id="onlineStats" class="panel panel-default">
-                            <div id="numberOfUsersOnline" class="col-xs-5">Number of Users
-                                Online {{ \Cache::get('numberOfUsers') }}</div>
+                            <div id="numberOfUsersOnline" class="col-xs-5">
+                                Number of Users Online {{ $numberOfUsers }}</div>
                         </div>
-                        {{--<div id="onlineUsers" class="panel panel-default">--}}
-                            {{--@foreach(\Cache::get('activities') as $activity)--}}
-                                {{--<div id="online-user-{{ $activity->user->id  }}"--}}
-                                     {{--class="col-xs-10"--}}
-                                     {{--data-lastlogin="{{ $activity->user->last_logged_in_at  }}">{{ $activity->user->name }}</div>--}}
-                            {{--@endforeach--}}
-                        {{--</div>--}}
+                        <div id="onlineUsers" class="panel panel-default">
+                            @foreach($activities as $activity)
+                                <div id="online-user-{{ $activity->user->id  }}"
+                                     class="col-xs-10"
+                                     data-lastlogin="{{ $activity->user->last_logged_in_at  }}">{{ $activity->user->name }}</div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>

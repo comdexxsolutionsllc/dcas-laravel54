@@ -2,11 +2,16 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use App\ActivityExtend;
+use App\User;
+use DCASDomain\Observers\ActivityObserver;
+use DCASDomain\Observers\UserObserver;
+use DCASDomain\ViewComposers\DashboardComposer;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\ServiceProvider;
 
-
-class AppServiceProvider extends ServiceProvider {
+class AppServiceProvider extends ServiceProvider
+{
 
     /**
      * Bootstrap any application services.
@@ -17,10 +22,15 @@ class AppServiceProvider extends ServiceProvider {
     {
         Schema::defaultStringLength(191);
 
-        \View::composer('layouts.app', function ($view)
-        {
+        \View::composer('*', DashboardComposer::class);
+
+
+        \View::composer('layouts.app', function ($view) {
             $view->with('users', \App\User::all());
         });
+
+        User::observe(UserObserver::class);
+        ActivityExtend::observe(ActivityObserver::class);
     }
 
 
@@ -31,8 +41,7 @@ class AppServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        if ($this->app->environment() == 'development')
-        {
+        if ($this->app->environment() == 'development') {
             $this->app->register(\Iber\Generator\ModelGeneratorProvider::class);
             $this->app->register(\MaddHatter\ViewGenerator\ServiceProvider::class);
         }

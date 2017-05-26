@@ -29,18 +29,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $activites = \Cache::remember('activities', 15, function () {
-            return Activity::users(15)->mostRecent()->get();
-        });
-
-        $numberOfUsers = \Cache::remember('numberOfUsers', 10, function () {
-            return Activity::users()->count();
-        });
-
-        $numberOfGuests = \Cache::remember('numberOfGuests', 10, function () {
-            Activity::guests()->count();
-        });
-
         return view('dashboard');
     }
 

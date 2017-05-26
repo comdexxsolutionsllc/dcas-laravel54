@@ -1603,12 +1603,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/InfyOmLabs/adminlte-templates.git",
-                "reference": "f0d01636f993554b23835a698272c7e7623db081"
+                "reference": "7f89d68fdb20f36f4cf5c449d265c91a2908d468"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/InfyOmLabs/adminlte-templates/zipball/f0d01636f993554b23835a698272c7e7623db081",
-                "reference": "f0d01636f993554b23835a698272c7e7623db081",
+                "url": "https://api.github.com/repos/InfyOmLabs/adminlte-templates/zipball/7f89d68fdb20f36f4cf5c449d265c91a2908d468",
+                "reference": "7f89d68fdb20f36f4cf5c449d265c91a2908d468",
                 "shasum": ""
             },
             "require": {
@@ -1640,7 +1640,7 @@
                 "laravel",
                 "templates"
             ],
-            "time": "2016-09-24T11:41:12+00:00"
+            "time": "2017-05-20T10:43:37+00:00"
         },
         {
             "name": "infyomlabs/laravel-generator",
@@ -1648,12 +1648,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/InfyOmLabs/laravel-generator.git",
-                "reference": "60febe3210e53e68052269a59ccd4e34c9dc053b"
+                "reference": "deffcc116243980948a71cf9613d988a5d341364"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/InfyOmLabs/laravel-generator/zipball/60febe3210e53e68052269a59ccd4e34c9dc053b",
-                "reference": "60febe3210e53e68052269a59ccd4e34c9dc053b",
+                "url": "https://api.github.com/repos/InfyOmLabs/laravel-generator/zipball/deffcc116243980948a71cf9613d988a5d341364",
+                "reference": "deffcc116243980948a71cf9613d988a5d341364",
                 "shasum": ""
             },
             "require": {
@@ -1699,7 +1699,7 @@
                 "test",
                 "view"
             ],
-            "time": "2017-03-04T03:23:13+00:00"
+            "time": "2017-05-20T11:14:39+00:00"
         },
         {
             "name": "infyomlabs/swagger-generator",
@@ -2734,16 +2734,16 @@
         },
         {
             "name": "laravelcollective/html",
-            "version": "v5.4.5",
+            "version": "v5.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelCollective/html.git",
-                "reference": "4aae8fb4384f9aaa17df44ad843b45af9cd721b3"
+                "reference": "9b8f51e7a2368911c896f5d42757886bae0717b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/4aae8fb4384f9aaa17df44ad843b45af9cd721b3",
-                "reference": "4aae8fb4384f9aaa17df44ad843b45af9cd721b3",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/9b8f51e7a2368911c896f5d42757886bae0717b5",
+                "reference": "9b8f51e7a2368911c896f5d42757886bae0717b5",
                 "shasum": ""
             },
             "require": {
@@ -2784,7 +2784,7 @@
             ],
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "http://laravelcollective.com",
-            "time": "2017-05-19T08:15:59+00:00"
+            "time": "2017-05-22T06:35:07+00:00"
         },
         {
             "name": "lavary/laravel-menu",
@@ -3848,16 +3848,16 @@
         },
         {
             "name": "owen-it/laravel-auditing",
-            "version": "v4.0.5",
+            "version": "v4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/owen-it/laravel-auditing.git",
-                "reference": "d6219df4c035a9cea54b0b2294d983651bf65516"
+                "reference": "6aaa175c4fc04a6547ea730104cb22f4cdbb4ec4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/owen-it/laravel-auditing/zipball/d6219df4c035a9cea54b0b2294d983651bf65516",
-                "reference": "d6219df4c035a9cea54b0b2294d983651bf65516",
+                "url": "https://api.github.com/repos/owen-it/laravel-auditing/zipball/6aaa175c4fc04a6547ea730104cb22f4cdbb4ec4",
+                "reference": "6aaa175c4fc04a6547ea730104cb22f4cdbb4ec4",
                 "shasum": ""
             },
             "require": {
@@ -3920,7 +3920,7 @@
                 "record",
                 "track"
             ],
-            "time": "2017-05-03T09:21:04+00:00"
+            "time": "2017-05-21T20:47:50+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -5132,16 +5132,16 @@
         },
         {
             "name": "spatie/laravel-tags",
-            "version": "1.3.5",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-tags.git",
-                "reference": "09be895bc17771a8cf1c152b893c938f5acb355c"
+                "reference": "a8c08e1d05b51b925ccd8a24b15309f98e57d328"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-tags/zipball/09be895bc17771a8cf1c152b893c938f5acb355c",
-                "reference": "09be895bc17771a8cf1c152b893c938f5acb355c",
+                "url": "https://api.github.com/repos/spatie/laravel-tags/zipball/a8c08e1d05b51b925ccd8a24b15309f98e57d328",
+                "reference": "a8c08e1d05b51b925ccd8a24b15309f98e57d328",
                 "shasum": ""
             },
             "require": {
@@ -5181,7 +5181,7 @@
                 "laravel-tags",
                 "spatie"
             ],
-            "time": "2017-02-13T18:51:59+00:00"
+            "time": "2017-05-23T09:38:49+00:00"
         },
         {
             "name": "spatie/laravel-tail",
@@ -6516,16 +6516,16 @@
         },
         {
             "name": "tcg/voyager",
-            "version": "v0.11.10",
+            "version": "v0.11.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/the-control-group/voyager.git",
-                "reference": "6eeb14e2c26c102cc619208b68673ed8a745bd64"
+                "reference": "10622dc41248ac45747376a873ce3519f92d6f0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/the-control-group/voyager/zipball/6eeb14e2c26c102cc619208b68673ed8a745bd64",
-                "reference": "6eeb14e2c26c102cc619208b68673ed8a745bd64",
+                "url": "https://api.github.com/repos/the-control-group/voyager/zipball/10622dc41248ac45747376a873ce3519f92d6f0d",
+                "reference": "10622dc41248ac45747376a873ce3519f92d6f0d",
                 "shasum": ""
             },
             "require": {
@@ -6569,7 +6569,7 @@
                 "laravel",
                 "panel"
             ],
-            "time": "2017-04-26T13:29:33+00:00"
+            "time": "2017-05-24T09:21:25+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -7281,16 +7281,16 @@
         },
         {
             "name": "yajra/laravel-datatables-oracle",
-            "version": "v7.4.0",
+            "version": "v7.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "0ce81393cbc6c6c47aa00e4d7d53eebc101266ef"
+                "reference": "b0e4171a442d33a0d52f6a2b860bc2842f0a0096"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/0ce81393cbc6c6c47aa00e4d7d53eebc101266ef",
-                "reference": "0ce81393cbc6c6c47aa00e4d7d53eebc101266ef",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/b0e4171a442d33a0d52f6a2b860bc2842f0a0096",
+                "reference": "b0e4171a442d33a0d52f6a2b860bc2842f0a0096",
                 "shasum": ""
             },
             "require": {
@@ -7338,7 +7338,7 @@
                 "jquery",
                 "laravel"
             ],
-            "time": "2017-05-01T04:09:32+00:00"
+            "time": "2017-05-22T03:51:49+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -7884,16 +7884,16 @@
         },
         {
             "name": "codeception/codeception",
-            "version": "2.2.11",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "a8681b416921ae282ccca2c485d75a3ed6756080"
+                "reference": "d4d76d18ea0ec8d504995995ae68fccac24523db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/a8681b416921ae282ccca2c485d75a3ed6756080",
-                "reference": "a8681b416921ae282ccca2c485d75a3ed6756080",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/d4d76d18ea0ec8d504995995ae68fccac24523db",
+                "reference": "d4d76d18ea0ec8d504995995ae68fccac24523db",
                 "shasum": ""
             },
             "require": {
@@ -7905,7 +7905,7 @@
                 "guzzlehttp/psr7": "~1.0",
                 "php": ">=5.4.0 <8.0",
                 "phpunit/php-code-coverage": ">=2.2.4 <6.0",
-                "phpunit/phpunit": ">4.8.20 <6.0",
+                "phpunit/phpunit": ">4.8.20 <7.0",
                 "phpunit/phpunit-mock-objects": ">2.3 <5.0",
                 "sebastian/comparator": ">1.1 <3.0",
                 "sebastian/diff": "^1.4",
@@ -7974,7 +7974,7 @@
                 "functional testing",
                 "unit testing"
             ],
-            "time": "2017-05-11T21:07:05+00:00"
+            "time": "2017-05-24T00:54:13+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -9025,16 +9025,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.19",
+            "version": "5.7.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "69c4f49ff376af2692bad9cebd883d17ebaa98a1"
+                "reference": "3cb94a5f8c07a03c8b7527ed7468a2926203f58b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/69c4f49ff376af2692bad9cebd883d17ebaa98a1",
-                "reference": "69c4f49ff376af2692bad9cebd883d17ebaa98a1",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3cb94a5f8c07a03c8b7527ed7468a2926203f58b",
+                "reference": "3cb94a5f8c07a03c8b7527ed7468a2926203f58b",
                 "shasum": ""
             },
             "require": {
@@ -9052,7 +9052,7 @@
                 "phpunit/php-timer": "^1.0.6",
                 "phpunit/phpunit-mock-objects": "^3.2",
                 "sebastian/comparator": "^1.2.4",
-                "sebastian/diff": "~1.2",
+                "sebastian/diff": "^1.4.3",
                 "sebastian/environment": "^1.3.4 || ^2.0",
                 "sebastian/exporter": "~2.0",
                 "sebastian/global-state": "^1.1",
@@ -9103,7 +9103,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-04-03T02:22:27+00:00"
+            "time": "2017-05-22T07:42:55+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -9324,16 +9324,16 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "1.4.2",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "3c7d21999e815cdfac70c6c7d79d3a9cb1bc7bc2"
+                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/3c7d21999e815cdfac70c6c7d79d3a9cb1bc7bc2",
-                "reference": "3c7d21999e815cdfac70c6c7d79d3a9cb1bc7bc2",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/7f066a26a962dbe58ddea9f72a4e82874a3975a4",
+                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4",
                 "shasum": ""
             },
             "require": {
@@ -9372,7 +9372,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2017-05-18T13:44:30+00:00"
+            "time": "2017-05-22T07:24:03+00:00"
         },
         {
             "name": "sebastian/environment",
